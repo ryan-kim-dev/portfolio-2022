@@ -11,28 +11,30 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mailer = require('./mailer');
 
-// app.use(compression());
-// app.use((req, res, next) => {
-//   res.header(
-//     'Access-Control-Allow-Methods',
-//     'OPTIONS, HEAD, GET, PUT, POST, DELETE'
-//   );
-//   res.header(
-//     'Access-Control-Allow-Headers',
-//     'Origin, X-Requested-With, Content-Type, Accept'
-//   );
-//   next();
-// });
-// // app.use(morgan('tiny'));
-// // Content Security Policy (CSP)
-// // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
-// // https://helmetjs.github.io/
+const whitelist = ['https://ryan-kim-portfolio.herokuapp.com'];
+
+app.use(cors());
+app.use(compression());
+app.use((req, res, next) => {
+  res.header(
+    'Access-Control-Allow-Methods',
+    'OPTIONS, HEAD, GET, PUT, POST, DELETE'
+  );
+  res.header(
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept'
+  );
+  next();
+});
+// app.use(morgan('tiny'));
+// Content Security Policy (CSP)
+// https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
+// https://helmetjs.github.io/
 app.use(
   helmet({
     contentSecurityPolicy: false,
   })
 );
-app.use(cors());
 app.use(express.static('./client/build'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
