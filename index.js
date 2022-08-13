@@ -29,14 +29,8 @@ app.use((req, res, next) => {
 // // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
 // // https://helmetjs.github.io/
 app.use(
-  helmet.contentSecurityPolicy({
-    directives: {
-      // 기본 옵션을 가져옵니다.
-      ...helmet.contentSecurityPolicy.getDefaultDirectives(),
-
-      // 구글 API 도메인과 인라인된 스크립트를 허용합니다.
-      'script-src': ["'self'", '*.googleapis.com', "'unsafe-inline'"],
-    },
+  helmet({
+    contentSecurityPolicy: false,
   })
 );
 app.use(express.static('./client/build'));
