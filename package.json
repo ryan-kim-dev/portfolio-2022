@@ -1,0 +1,28 @@
+{
+  "name": "my-portfolio-app",
+  "version": "1.0.0",
+  "description": "[임시 배포 버젼](https://ryan-kim-portfolio.herokuapp.com/)",
+  "main": "index.js",
+  "engines": {
+    "node": "16.15.1",
+    "npm": "8.5.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "start:client": "cd client && npm start",
+    "start:server": "cd server && npm start",
+    "heroku-postbuild": "cd server && npm install && cd ../client && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryan-kim-dev/my-portfolio-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryan-kim-dev/my-portfolio-app/issues"
+  },
+  "homepage": "https://github.com/ryan-kim-dev/my-portfolio-app#readme"
+}
