@@ -29,8 +29,11 @@ app.use((req, res, next) => {
 // // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
 // // https://helmetjs.github.io/
 app.use(
-  helmet({
-    contentSecurityPolicy: false,
+  helmet.contentSecurityPolicy({
+    directives: {
+      'script-src': ["'self'", 'https://ryan-kim-portfolio.herokuapp.com/'],
+      'style-src': null,
+    },
   })
 );
 app.use(express.static('./client/build'));
