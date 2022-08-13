@@ -23,17 +23,13 @@ app.use((req, res, next) => {
   );
   next();
 });
-app.use(morgan('tiny'));
+// app.use(morgan('tiny'));
 // Content Security Policy (CSP)
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
 // https://helmetjs.github.io/
-// app.use(helmet.crossOriginResourcePolicy({ policy: 'cross-origin' }));
 app.use(
-  helmet.contentSecurityPolicy({
-    directives: {
-      'script-src': ["'self'", 'ryan-kim-portfolio.herokuapp.com/'],
-      'img-src': '*',
-    },
+  helmet({
+    contentSecurityPolicy: false,
   })
 );
 app.use(express.static('./client/build'));
@@ -41,7 +37,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('/', cors(), (req, res) => {
+app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, './client/build', 'index.html'));
 });
 
