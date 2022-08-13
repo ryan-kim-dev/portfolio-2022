@@ -27,6 +27,7 @@ app.use(morgan('tiny'));
 // Content Security Policy (CSP)
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
 // https://helmetjs.github.io/
+app.use(helmet.crossOriginResourcePolicy({ policy: 'cross-origin' }));
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
