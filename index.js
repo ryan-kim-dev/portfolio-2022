@@ -32,11 +32,7 @@ app.use(
     contentSecurityPolicy: false,
   })
 );
-app.use(
-  cors({
-    origin: '*',
-  })
-);
+app.use(cors());
 app.use(express.static('./client/build'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
