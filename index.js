@@ -27,11 +27,11 @@ const mailer = require('./mailer');
 // // Content Security Policy (CSP)
 // // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
 // // https://helmetjs.github.io/
-// app.use(
-//   helmet({
-//     contentSecurityPolicy: false,
-//   })
-// );
+app.use(
+  helmet({
+    contentSecurityPolicy: false,
+  })
+);
 app.use(cors());
 app.use(express.static('./client/build'));
 app.use(bodyParser.urlencoded({ extended: true }));
