@@ -11,6 +11,18 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mailer = require('./mailer');
 
+const whitelist = ['https://ryan-kim-portfolio.herokuapp.com'];
+const corsOptions = {
+  origin: (origin, callback) => {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not Allowed Origin.'));
+    }
+  },
+};
+app.use(cors(corsOptions));
+
 app.use(compression());
 app.use((req, res, next) => {
   res.header(
@@ -35,7 +47,6 @@ app.use(
 app.use(express.static('./client/build'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(cors());
 
 app.get('/', cors(), (req, res) => {
   res.sendFile(path.join(__dirname, './client/build', 'index.html'));
