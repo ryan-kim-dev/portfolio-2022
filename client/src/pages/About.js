@@ -19,6 +19,7 @@ function About() {
           </Greeting>
           <Cover>
             <img
+              crossorigin="anonymous"
               src="https://avatars.githubusercontent.com/u/78180055?v=4"
               alt="profile"
             />
@@ -67,6 +68,7 @@ function About() {
           <Career>
             <CareerLeft className="career-left">
               <img
+                crossorigin="anonymous"
                 src="https://codestates.com/assets/codestates-ci.png"
                 alt="codestates-logo"
               />

@@ -43,7 +43,11 @@ function Auth() {
         <>
           <UserInfoArea>
             <div>
-              <UserPic src={localStorage.getItem('photoURL')} alt="profile" />
+              <UserPic
+                crossorigin="anonymous"
+                src={localStorage.getItem('photoURL')}
+                alt="profile"
+              />
             </div>
             <div>{localStorage.getItem('displayName')}님, 반갑습니다!</div>
           </UserInfoArea>

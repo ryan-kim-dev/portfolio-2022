@@ -10,7 +10,11 @@ const Works = () => {
       <Projects>
         <Project>
           <ProjectImgArea>
-            <img src="https://i.imgur.com/WwQFDbz.png" alt="portfolio-cover" />
+            <img
+              crossorigin="anonymous"
+              src="https://i.imgur.com/WwQFDbz.png"
+              alt="portfolio-cover"
+            />
           </ProjectImgArea>
           <ProjectDetail className="project-detail">
             <ProjectName>개인 프로젝트 - 포트폴리오 웹사이트</ProjectName>
