@@ -11,20 +11,6 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mailer = require('./mailer');
 
-const cspOptions = {
-  directives: {
-    // 헬멧 기본 옵션 가져오기
-    ...helmet.contentSecurityPolicy.getDefaultDirectives(), // 기본 헬멧 설정 객체를 리턴하는 함수를 받아 전개 연산자로 삽입
-    'img-src': [
-      "'self'",
-      'data:',
-      '*.codestates.com',
-      '*.avatars.githubusercontent.com',
-    ],
-    'base-uri': ['/', 'http:'],
-  },
-};
-
 app.use(compression());
 app.use((req, res, next) => {
   res.header(
@@ -43,10 +29,9 @@ app.use((req, res, next) => {
 // https://helmetjs.github.io/
 app.use(
   helmet({
-    contentSecurityPolicy: cspOptions,
+    contentSecurityPolicy: false,
   })
 );
-
 app.use(express.static('./client/build'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
