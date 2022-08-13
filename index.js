@@ -31,7 +31,11 @@ app.use((req, res, next) => {
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
-      'script-src': ["'self'", 'https://ryan-kim-portfolio.herokuapp.com/'],
+      'script-src': [
+        "'self'",
+        'https://ryan-kim-portfolio.herokuapp.com/',
+        "'unsafe-inline'",
+      ],
       'style-src': null,
     },
   })
