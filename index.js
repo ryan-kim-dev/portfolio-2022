@@ -31,12 +31,11 @@ app.use((req, res, next) => {
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
-      'script-src': [
-        "'self'",
-        'https://ryan-kim-portfolio.herokuapp.com/',
-        "'unsafe-inline'",
-      ],
-      'style-src': null,
+      // 기본 옵션을 가져옵니다.
+      ...helmet.contentSecurityPolicy.getDefaultDirectives(),
+
+      // 구글 API 도메인과 인라인된 스크립트를 허용합니다.
+      'script-src': ["'self'", '*.googleapis.com', "'unsafe-inline'"],
     },
   })
 );
