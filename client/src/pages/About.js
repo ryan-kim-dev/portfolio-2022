@@ -19,7 +19,7 @@ function About() {
           </Greeting>
           <Cover>
             <img
-              crossorigin="anonymous"
+              crossOrigin="anonymous"
               src="https://avatars.githubusercontent.com/u/78180055?v=4"
               alt="profile"
             />

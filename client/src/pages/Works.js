@@ -11,7 +11,7 @@ const Works = () => {
         <Project>
           <ProjectImgArea>
             <img
-              crossorigin="anonymous"
+              crossOrigin="anonymous"
               src="https://i.imgur.com/WwQFDbz.png"
               alt="portfolio-cover"
             />

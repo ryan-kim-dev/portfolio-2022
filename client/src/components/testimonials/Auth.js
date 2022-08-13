@@ -44,7 +44,7 @@ function Auth() {
           <UserInfoArea>
             <div>
               <UserPic
-                crossorigin="anonymous"
+                crossOrigin="anonymous"
                 src={localStorage.getItem('photoURL')}
                 alt="profile"
               />

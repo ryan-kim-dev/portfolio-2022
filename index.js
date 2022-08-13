@@ -11,8 +11,6 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mailer = require('./mailer');
 
-const whitelist = ['https://ryan-kim-portfolio.herokuapp.com'];
-
 app.use(compression());
 app.use((req, res, next) => {
   res.header(
@@ -34,7 +32,11 @@ app.use(
     contentSecurityPolicy: false,
   })
 );
-app.use(cors());
+app.use(
+  cors({
+    origin: '*',
+  })
+);
 app.use(express.static('./client/build'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
