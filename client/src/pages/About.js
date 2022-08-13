@@ -68,8 +68,8 @@ function About() {
           <Career>
             <CareerLeft className="career-left">
               <img
-                crossorigin="anonymous"
-                src="https://codestates.com/assets/codestates-ci.png"
+                crossOrigin="anonymous"
+                src="https://i.imgur.com/y4l5KJG.png"
                 alt="codestates-logo"
               />
             </CareerLeft>

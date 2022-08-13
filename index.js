@@ -11,8 +11,6 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mailer = require('./mailer');
 
-const whitelist = ['https://ryan-kim-portfolio.herokuapp.com'];
-
 app.use(cors());
 app.use(compression());
 app.use((req, res, next) => {
@@ -26,10 +24,10 @@ app.use((req, res, next) => {
   );
   next();
 });
-// app.use(morgan('tiny'));
-// Content Security Policy (CSP)
-// https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
-// https://helmetjs.github.io/
+// // app.use(morgan('tiny'));
+// // Content Security Policy (CSP)
+// // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
+// // https://helmetjs.github.io/
 app.use(
   helmet({
     contentSecurityPolicy: false,
