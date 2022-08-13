@@ -32,13 +32,13 @@ app.use(
     contentSecurityPolicy: false,
   })
 );
-app.use(express.static('../client/build'));
+app.use(express.static('./client/build'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, './client/build', 'index.html'));
 });
 
 app.post('/mail', cors(), async (req, res) => {
