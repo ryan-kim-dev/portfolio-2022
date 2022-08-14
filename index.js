@@ -31,6 +31,7 @@ app.use((req, res, next) => {
 app.use(
   helmet({
     contentSecurityPolicy: false,
+    crossOriginResourcePolicy: false,
   })
 );
 app.use(express.static('./client/build'));
