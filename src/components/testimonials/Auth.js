@@ -17,8 +17,6 @@ function Auth() {
 
   useEffect(() => {
     auth.onAuthStateChanged(user => {
-      console.log(user);
-
       if (user) {
         const loginStatus = 'true';
         localStorage.setItem('loginStatus', loginStatus);
