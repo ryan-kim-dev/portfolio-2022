@@ -1,40 +1,32 @@
-import React, { useState } from 'react';
+import React from 'react';
 import SectionTitle from '../components/common/SectionTitle';
 import { Container } from '../GlobalStyle';
 import styled from 'styled-components';
-import axios from 'axios';
+// import axios from 'axios';
 // import { axiosInstance } from '../config';
 const Contact = () => {
-  const [data, setData] = useState({
-    yourname: '',
-    youremail: '',
-    yoursubject: '',
-    yourmessage: '',
-  });
+  // const [data, setData] = useState({
+  //   yourname: '',
+  //   youremail: '',
+  //   yoursubject: '',
+  //   yourmessage: '',
+  // });
 
   const onChange = e => {
     e.preventDefault();
-    const { name, value } = e.target;
-    setData(prev => ({
-      ...prev, // 기존 객체 복사 (spread)
-      [name]: value,
-      // input에 부여된 name 속성의 값을 key로, name 키를 가진 값을 value로 설정.
-      // [] 로 감싸 key 값을 동적으로 받는다.
-      // 참고 : https://kjhg478.tistory.com/27
-    }));
+    // const { name, value } = e.target;
+    // setData(prev => ({
+    //   ...prev, // 기존 객체 복사 (spread)
+    //   [name]: value,
+    //   // input에 부여된 name 속성의 값을 key로, name 키를 가진 값을 value로 설정.
+    //   // [] 로 감싸 key 값을 동적으로 받는다.
+    //   // 참고 : https://kjhg478.tistory.com/27
+    // }));
   };
 
   const onSubmit = async e => {
     e.preventDefault();
-    axios
-      .post('/mail', {
-        data: {
-          ...data,
-        },
-      })
-      .then(res => {
-        console.log(res.data);
-      });
+    alert('아직 구현중입니다 ㅜㅜ');
   };
 
   return (
