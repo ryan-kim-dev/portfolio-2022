@@ -1,5 +1,5 @@
+// * Reducer.js : 스토어의 기본 상태와 상태의 업데이트를 담당하는 코드
 import * as types from './actionTypes';
-
 const initialState = {
   loading: false,
   currentUser: null,

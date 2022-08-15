@@ -1,3 +1,4 @@
+// * actions.js : action 생성자
 import * as types from './actionTypes';
 
 import { auth, provider } from '../firebase';

@@ -5,13 +5,14 @@ import { db } from '../../firebase';
 import { doc, setDoc, deleteDoc } from 'firebase/firestore';
 
 const MessageForm = ({ method }) => {
-  // const messagesCollectionRef = collection(db, 'messages');
+  console.log(localStorage.uid);
 
   const [message, setMessage] = useState({
     username: '',
     relation: '',
     bodyText: '',
-    photoURL: localStorage.getItem('photoURL'),
+    photoURL: localStorage.photoURL,
+    uid: localStorage.uid,
   });
   const onSubmit = async e => {
     e.preventDefault();
