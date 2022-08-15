@@ -73,14 +73,14 @@ export const githubSignInInitiate = () => {
       .then(({ user }) => {
         if (user) {
           // console.log(user);
-          // 값 들어온다. 콘솔에서 확인할 것. 여기서 받은 사용자의 데이터를 리덕스로 상태관리하자.
-          // 변수로 뽑아서 값을 저장한 다음에 db로 보내야 하나?
           const displayName = user.displayName;
           const photoURL = user.photoURL;
+          const uid = user.uid;
           const loginStatus = true;
           localStorage.setItem('displayName', displayName);
           localStorage.setItem('photoURL', photoURL);
           localStorage.setItem('loginStatus', loginStatus);
+          localStorage.setItem('uid', uid);
           return dispatch(githubSignInSuccess(user));
         }
       })

@@ -2,25 +2,65 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 // 파이어페에스 db에 글 추가하기위해 import
 import { db } from '../../firebase';
-import { addDoc, collection } from 'firebase/firestore';
+import { doc, setDoc, deleteDoc } from 'firebase/firestore';
 
-const MessageForm = () => {
+const MessageForm = ({ method }) => {
   // const messagesCollectionRef = collection(db, 'messages');
 
   const [message, setMessage] = useState({
     username: '',
     relation: '',
     bodyText: '',
+    photoURL: localStorage.getItem('photoURL'),
   });
   const onSubmit = async e => {
     e.preventDefault();
     // 참고 : https://firebase.google.com/docs/firestore/manage-data/add-data?hl=ko&authuser=0
-    try {
-      const res = await addDoc(collection(db, 'messages'), message);
-      console.log(res);
-      window.location.reload();
-    } catch (err) {
-      console.log(err);
+
+    const createMessage = async () => {
+      const newRef = doc(db, 'messages', `${message.uid}`);
+      try {
+        const res = await setDoc(newRef, message);
+        console.log(res);
+        // TODO: 팝업창 닫기 props로 받아 실행시키고 새로고침 대신 모달창만 닫도록 개선할것
+        window.location.reload();
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    const updateMessage = async () => {
+      try {
+        const targetDoc = doc(db, 'messages', `${message.uid}`);
+        const res = await setDoc(targetDoc, message);
+        console.log(res);
+        // TODO: 새로고침 대신 모달창만 닫도록 개선할것
+        window.location.reload();
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    const deleteMessage = async () => {
+      try {
+        const targetDoc = doc(db, 'messages', `${message.uid}`);
+        await deleteDoc(targetDoc);
+        // TODO: 새로고침 대신 모달창만 닫도록 개선할것
+        window.location.reload();
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    if (method === '추가하기') {
+      return createMessage();
+    }
+
+    if (method === '수정하기') {
+      return updateMessage();
+    }
+    if (method === '삭제하기') {
+      return deleteMessage();
     }
   };
 
@@ -37,36 +77,44 @@ const MessageForm = () => {
 
   return (
     <FormContainer onSubmit={onSubmit}>
-      <div>
-        <span>추천사 추가하기</span>
-      </div>
-      <div>
-        <input
-          onChange={onChange}
-          type="text"
-          name="username"
-          placeholder="성함을 입력해주세요."
-        />
-      </div>
-      <div>
-        <input
-          onChange={onChange}
-          type="text"
-          name="relation"
-          placeholder="관계를 입력해주세요."
-        />
-      </div>
-      <div>
-        <input
-          onChange={onChange}
-          type="textarea"
-          name="bodyText"
-          placeholder="남겨주신 한글자 한글자가 큰 힘이 됩니다. 감사합니다!!"
-        />
+      {method === '삭제하기' ? (
         <div>
-          <input type="submit" value="추천사 추가하기" />
+          <input type="submit" value={method} />
         </div>
-      </div>
+      ) : (
+        <>
+          <div>
+            <span>{`추천사 ${method}`}</span>
+          </div>
+          <div>
+            <input
+              onChange={onChange}
+              type="text"
+              name="username"
+              placeholder="성함을 입력해주세요."
+            />
+          </div>
+          <div>
+            <input
+              onChange={onChange}
+              type="text"
+              name="relation"
+              placeholder="관계를 입력해주세요."
+            />
+          </div>
+          <div>
+            <input
+              onChange={onChange}
+              type="textarea"
+              name="bodyText"
+              placeholder="남겨주신 한글자 한글자가 큰 힘이 됩니다. 감사합니다!!"
+            />
+          </div>
+          <div>
+            <input type="submit" value={method} />
+          </div>
+        </>
+      )}
     </FormContainer>
   );
 };

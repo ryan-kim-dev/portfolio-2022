@@ -1,7 +1,7 @@
 import React from 'react';
 // import styled from 'styled-components';
 import { ModalBackdrop, ModalView } from '../../GlobalStyle';
-
+import MessageForm from './MessageForm';
 function DeleteMessage({ isOpen, setIsOpen, handleButtonClick }) {
   return (
     <ModalBackdrop>
@@ -10,7 +10,7 @@ function DeleteMessage({ isOpen, setIsOpen, handleButtonClick }) {
           x
         </button>
         <div>
-          <p>추천사 삭제하기</p>
+          <MessageForm method="삭제하기" />
         </div>
       </ModalView>
     </ModalBackdrop>

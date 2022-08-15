@@ -11,7 +11,7 @@ function AddMessage({ isOpen, setIsOpen, handleButtonClick }) {
           x
         </button>
         <div>
-          <MessageForm />
+          <MessageForm method="추가하기" />
         </div>
       </ModalView>
     </ModalBackdrop>

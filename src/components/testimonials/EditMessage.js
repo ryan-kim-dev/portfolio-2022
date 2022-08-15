@@ -1,6 +1,7 @@
 import React from 'react';
 // import styled from 'styled-components';
 import { ModalBackdrop, ModalView } from '../../GlobalStyle';
+import MessageForm from './MessageForm';
 
 function EditMessage({ isOpen, setIsOpen, handleButtonClick }) {
   return (
@@ -10,7 +11,7 @@ function EditMessage({ isOpen, setIsOpen, handleButtonClick }) {
           x
         </button>
         <div>
-          <p>추천사 수정하기</p>
+          <MessageForm method={'수정하기'} />
         </div>
       </ModalView>
     </ModalBackdrop>
