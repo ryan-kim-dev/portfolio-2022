@@ -11,10 +11,15 @@ function SectionTitle({ title }) {
 export default SectionTitle;
 
 const SectionTitleWrapper = styled.div`
-  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  transform-origin: left top;
+  transform: rotate(-90deg) translateX(-100%);
+  width: max-content;
   height: auto;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 `;
 

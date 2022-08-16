@@ -1,67 +1,41 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container } from '../GlobalStyle';
+import SectionTitle from '../components/common/SectionTitle';
+import ContactLinks from '../components/common/ContactLinks';
 
 function About() {
   const titles = ['SKILLS', 'PATH', 'PROJECTS'];
 
   return (
     <AboutContainer>
+      <SectionTitle title="about me" />
       <AboutSection>
-        <Header>
-          <Greeting>
-            <span className="text-2">안녕하세요!</span> <br />
-            <span className="text-1">김현호 입니다.</span> <br />
-            <span className="text-3">프론트엔드 개발자에요.</span> <br />
-            <span>
-              <a href="https://www.github.com/ryan-kim-dev">Contact Me</a>
-            </span>
-          </Greeting>
+        <Header className="text-dark">
           <Cover>
-            <img
+            <ProfileImg
               crossOrigin="anonymous"
               src="https://avatars.githubusercontent.com/u/78180055?v=4"
               alt="profile"
             />
+            <ContactLinks />
           </Cover>
+          <Greeting>
+            <span className="text-2">안녕하세요!</span> <br />
+            <span className="text-1">김현호 입니다.</span> <br />
+            <span className="text-3">프론트엔드 개발자에요.</span> <br />
+            <Intro>
+              3d와 애니메이션이 조화된 인터렉티브 웹에 관심이 많습니다. <br />
+              단순한 데이터의 정렬된 나열이 아닌, 입체로 살아숨쉬는 웹앱을
+              만들며,
+              <br />
+              기본기 또한 탄탄한 개발자가 되기 위해 공부하고 있습니다.
+            </Intro>
+          </Greeting>
         </Header>
-        <Intro>
-          3d와 애니메이션이 조화된 인터렉티브 웹에 관심이 많습니다. <br />
-          단순한 데이터의 정렬된 나열이 아닌, 입체로 살아숨쉬는 웹앱을 만들며,
-          <br />
-          기본기 또한 탄탄한 개발자가 되기 위해 공부하고 있습니다.
-        </Intro>
         <Divider />
         <Title>{titles[0]}</Title>
-        <Skills className="skills">
-          <Skill>
-            <SkillImg />
-            <SkillName>JS</SkillName>
-            <Comment>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-              modi, natus minus fugit aut sed quis, quae qui iste est enim in
-              magnam odio delectus, dignissimos exercitationem sunt dolor eius?
-            </Comment>
-          </Skill>
-          <Skill>
-            <SkillImg />
-            <SkillName>JS</SkillName>
-            <Comment>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-              modi, natus minus fugit aut sed quis, quae qui iste est enim in
-              magnam odio delectus, dignissimos exercitationem sunt dolor eius?
-            </Comment>
-          </Skill>
-          <Skill>
-            <SkillImg />
-            <SkillName>JS</SkillName>
-            <Comment>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-              modi, natus minus fugit aut sed quis, quae qui iste est enim in
-              magnam odio delectus, dignissimos exercitationem sunt dolor eius?
-            </Comment>
-          </Skill>
-        </Skills>
+        <div>skills 들어갈 자리</div>
         <Divider />
         <Title>{titles[1]}</Title>
         <LowerArea>
@@ -73,7 +47,7 @@ function About() {
                 alt="codestates-logo"
               />
             </CareerLeft>
-            <CareerRight className="career-right">
+            <CareerRight className="career-right text-dark">
               <Span className="title">코드스테이츠</Span>
               <Span className="date">2022.04.25 ~ 2022.10.19</Span>
               <Span className="description">
@@ -94,66 +68,56 @@ const AboutContainer = styled(Container)`
 `;
 
 const AboutSection = styled.div`
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(40px);
+  padding: 3rem;
+
   display: flex;
-  width: 600px;
+  width: 70%;
   flex-direction: column;
-  row-gap: 60px;
-  padding: 60px 0;
-
-  /* 테블릿 세로 (해상도 768px ~ 1023px)*/
-  @media all and (min-width: 768px) and (max-width: 1023px) {
-  }
-
-  /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
-  @media all and (min-width: 480px) and (max-width: 767px) {
-  }
-
+  row-gap: 3rem;
   /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
   @media all and (max-width: 479px) {
-    width: 60vw;
-    row-gap: 20px;
   }
 `;
 
 const Header = styled.header`
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  column-gap: 2rem;
+`;
+
+const Cover = styled.div`
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  color: #000000;
+  padding: 1rem;
+`;
+
+const ProfileImg = styled.img`
+  width: 20rem;
+  height: auto;
+  margin-bottom: 1rem;
 `;
 
 const Greeting = styled.div`
-  line-height: 1;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
-
-  /* 테블릿 세로 (해상도 768px ~ 1023px)*/
-  @media all and (min-width: 768px) and (max-width: 1023px) {
-  }
-
-  /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
-  @media all and (min-width: 480px) and (max-width: 767px) {
-  }
-
+  padding: 2rem;
+  color: #000000;
   /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
   @media all and (max-width: 479px) {
-    row-gap: 0;
   }
 
   .text-1 {
     font-weight: bold;
-    font-size: 4em;
-
-    /* 테블릿 세로 (해상도 768px ~ 1023px)*/
-    @media all and (min-width: 768px) and (max-width: 1023px) {
-    }
-
-    /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
-    @media all and (min-width: 480px) and (max-width: 767px) {
-    }
+    font-size: 3em;
 
     /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
     @media all and (max-width: 479px) {
-      font-size: 20px;
     }
   }
 
@@ -161,17 +125,8 @@ const Greeting = styled.div`
     font-weight: bold;
     font-size: 2em;
 
-    /* 테블릿 세로 (해상도 768px ~ 1023px)*/
-    @media all and (min-width: 768px) and (max-width: 1023px) {
-    }
-
-    /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
-    @media all and (min-width: 480px) and (max-width: 767px) {
-    }
-
     /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
     @media all and (max-width: 479px) {
-      font-size: 16px;
     }
   }
 
@@ -179,32 +134,9 @@ const Greeting = styled.div`
     font-size: 1.5em;
     color: blueviolet;
 
-    /* 테블릿 세로 (해상도 768px ~ 1023px)*/
-    @media all and (min-width: 768px) and (max-width: 1023px) {
-    }
-
-    /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
-    @media all and (min-width: 480px) and (max-width: 767px) {
-    }
-
     /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
     @media all and (max-width: 479px) {
-      font-size: 12px;
     }
-  }
-
-  a {
-    font-family: 'Oswald', sans-serif;
-    color: inherit;
-    text-decoration: none;
-    border-bottom: 5px solid #414141;
-  }
-`;
-
-const Cover = styled.div`
-  img {
-    width: 100%;
-    height: auto;
   }
 `;
 
@@ -212,63 +144,19 @@ const Intro = styled.div`
   font-size: 1.2rem;
   font-weight: 500;
 
-  /* 테블릿 세로 (해상도 768px ~ 1023px)*/
-  @media all and (min-width: 768px) and (max-width: 1023px) {
-  }
-
-  /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
-  @media all and (min-width: 480px) and (max-width: 767px) {
-  }
-
   /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
   @media all and (max-width: 479px) {
-    font-size: 16px;
   }
 `;
 
-const Divider = styled.hr`
-  border-top: 1px solid gray;
-`;
+const Divider = styled.hr``;
 
 const Title = styled.h2`
   font-family: 'Oswald', sans-serif;
-`;
-
-const Skills = styled.div`
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  row-gap: 30px;
-`;
-
-const Skill = styled.div`
-  background-color: #fff;
-  border: 1px solid #e5e5e5;
-  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 15px;
-  padding: 30px;
   display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-
-  /* 테블릿 세로 (해상도 768px ~ 1023px)*/
-  @media all and (min-width: 768px) and (max-width: 1023px) {
-  }
-
-  /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
-  @media all and (min-width: 480px) and (max-width: 767px) {
-  }
-
-  /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
-  @media all and (max-width: 479px) {
-    font-size: 12px;
-  }
+  width: 100%;
+  justify-content: center;
 `;
-
-const SkillName = styled.h3``;
-
-const SkillImg = styled.img``;
-
-const Comment = styled.div``;
 
 const LowerArea = styled.section`
   display: flex;
@@ -278,24 +166,21 @@ const LowerArea = styled.section`
   width: 100%;
   height: auto;
 
-  /* 테블릿 세로 (해상도 768px ~ 1023px)*/
-  @media all and (min-width: 768px) and (max-width: 1023px) {
-  }
-  /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
-  @media all and (min-width: 480px) and (max-width: 767px) {
-  }
   /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
   @media all and (max-width: 479px) {
-    padding: 0;
   }
 `;
 
 const Career = styled.article`
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(40px);
+  padding: 3em;
+
   display: flex;
   border-radius: 15px;
   width: 100%;
   height: auto;
-  background-color: #fff;
   flex-direction: row;
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
   /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
@@ -321,11 +206,7 @@ const CareerLeft = styled.div`
       height: 15px;
     }
   }
-  @media all and (min-width: 768px) and (max-width: 1023px) {
-  }
-  /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
-  @media all and (min-width: 480px) and (max-width: 767px) {
-  }
+
   /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
   @media all and (max-width: 479px) {
   }
@@ -338,11 +219,6 @@ const CareerRight = styled.div`
   align-items: center;
   width: 100%;
 
-  @media all and (min-width: 768px) and (max-width: 1023px) {
-  }
-  /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
-  @media all and (min-width: 480px) and (max-width: 767px) {
-  }
   /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
   @media all and (max-width: 479px) {
     text-align: center;

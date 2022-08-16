@@ -7,7 +7,9 @@ const Home = () => {
   return (
     <HomeContainer id="home">
       <SceneWrapper>
-        <Scene scene="https://prod.spline.design/zo7-TU0uJWfVO-Ye/scene.splinecode" />
+        {window.screen.width > 400 && (
+          <Scene scene="https://prod.spline.design/zo7-TU0uJWfVO-Ye/scene.splinecode" />
+        )}
       </SceneWrapper>
 
       <TextSection>
@@ -28,7 +30,8 @@ const SceneWrapper = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vh;
-
+  position: fixed;
+  z-index: 0;
   /* 테블릿 세로 (해상도 768px ~ 1023px)*/
   @media all and (min-width: 768px) and (max-width: 1023px) {
     transform: scale(0.7) translateX(600px);
@@ -70,6 +73,7 @@ const Scene = styled(Spline)`
 `;
 
 const TextSection = styled.div`
+  /* z-index: 1; */
   position: absolute;
   left: 200px;
   font-size: 180px;

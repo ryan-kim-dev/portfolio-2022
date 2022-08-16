@@ -28,8 +28,8 @@ body {
   #dark .skills {
     color: #414141;
   }
-  #dark .career-right {
-    color: #414141;
+  #dark .text-dark {
+    color: #000000;
   }
 /* Home 페이지 nav item 테마 변경시 별도 색상값 */
   #dark .nav {
@@ -80,45 +80,9 @@ export const Container = styled.div`
   align-items: center;
   width: 100%;
   height: 100vh;
-
+  position: relative;
   margin-right: auto;
   margin-left: auto;
-
-  /* 테블릿 세로 (해상도 768px ~ 1023px)*/
-  @media all and (min-width: 768px) and (max-width: 1023px) {
-  }
-
-  /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
-  @media all and (min-width: 480px) and (max-width: 767px) {
-  }
-
-  /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
-  @media all and (max-width: 479px) {
-    padding: 0 40px;
-  }
-`;
-
-export const TitleSection = styled.section`
-  width: 30%;
-  height: 100vh;
-  color: #e5e5e5;
-
-  /* 테블릿 세로 (해상도 768px ~ 1023px)*/
-  @media all and (min-width: 768px) and (max-width: 1023px) {
-  }
-
-  /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
-  @media all and (min-width: 480px) and (max-width: 767px) {
-  }
-
-  /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
-  @media all and (max-width: 479px) {
-    display: none;
-  }
-`;
-export const MainSection = styled.section`
-  width: 70%;
-  height: 100vh;
 `;
 
 export const ModalContainer = styled.div`
@@ -133,9 +97,9 @@ export const ModalContainer = styled.div`
 // * 모달 팝업 뒷배경
 export const ModalBackdrop = styled.div`
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,7 +120,6 @@ export const ModalView = styled.div.attrs(props => ({
   // * 모달창에서 attrs 메서드 사용하는 이유: 스크린 리더 상에서 태그 설명 등 웹 접근성
   role: 'dialog', // dialog -> 모달창임을 나타내는 role
 }))`
-  // TODO : Modal창 CSS를 구현합니다.
   position: relative;
   width: max-content;
   height: max-content;

@@ -2,6 +2,7 @@ import React from 'react';
 import SectionTitle from '../components/common/SectionTitle';
 import { Container } from '../GlobalStyle';
 import styled from 'styled-components';
+import ContactLinks from '../components/common/ContactLinks';
 // import axios from 'axios';
 // import { axiosInstance } from '../config';
 const Contact = () => {
@@ -32,8 +33,18 @@ const Contact = () => {
   return (
     <ContactContainer id="contact">
       <SectionTitle title={'Contact'} />
-      <FormContainer>
-        <SocialTab>링크들어갈자리</SocialTab>
+      <FormContainer className="text-dark">
+        <SocialTab>
+          <Img
+            src="https://avatars.githubusercontent.com/u/78180055?v=4"
+            alt="profile"
+          />
+          <div>
+            <h2>김현호</h2>
+            <span>ryankim.h.dev@gmail.com</span>
+          </div>
+          <ContactLinks />
+        </SocialTab>
         <Form
           action="/mail"
           method="post"
@@ -64,8 +75,7 @@ const Contact = () => {
           </Div>
           <Div>
             <Label htmlFor="message">Message</Label>
-            <Input
-              type="textarea"
+            <textarea
               name="yourmessage"
               id="message"
               required
@@ -84,15 +94,13 @@ export default Contact;
 const ContactContainer = styled(Container)``;
 
 const FormContainer = styled.div`
-  border: 1px solid black;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(40px);
+  padding: 3em 3em 3em 0;
+
   width: 800px;
   display: flex;
-  @media all and (min-width: 768px) and (max-width: 1023px) {
-  }
-
-  /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
-  @media all and (min-width: 480px) and (max-width: 767px) {
-  }
 
   /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
   @media all and (max-width: 479px) {
@@ -100,11 +108,25 @@ const FormContainer = styled.div`
 `;
 
 const SocialTab = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   width: 50%;
+  text-align: center;
+
+  h2 {
+    letter-spacing: 0.1rem;
+  }
+`;
+
+const Img = styled.img`
+  width: 50%;
+  border-radius: 50%;
 `;
 
 const Form = styled.form`
-  background-color: #fff;
+  background: rgba(255, 255, 255, 0.2);
   width: 70%;
   display: flex;
   row-gap: 30px;
@@ -112,6 +134,17 @@ const Form = styled.form`
   justify-content: center;
   align-items: flex-start;
   position: relative;
+  padding: 1rem;
+
+  textarea {
+    background: inherit;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1.5px solid #414141;
+    width: 400px;
+    height: 150px;
+  }
 `;
 
 const Div = styled.div``;
@@ -122,12 +155,12 @@ const Label = styled.label`
 `;
 
 const Input = styled.input`
-  background-color: #fff;
+  background: inherit;
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 1.5px solid #414141;
-  width: 100%;
+  width: 400px;
 
   &.submit-btn {
     width: max-content;

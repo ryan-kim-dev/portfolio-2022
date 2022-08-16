@@ -62,10 +62,19 @@ function Links() {
 export default Links;
 
 const LinkWrapper = styled.div`
-  width: 100vw;
-
+  width: 100%;
   display: flex;
   justify-content: space-around;
 `;
 
-const LinkDivider = styled.div``;
+const LinkDivider = styled.div`
+  button {
+    border: none;
+    cursor: pointer;
+    border-radius: 70px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    padding: 5px 10px;
+    margin: 5px;
+  }
+`;

@@ -6,11 +6,11 @@ function Message({ username, relation, bodyText, photoURL }) {
     <MsgContainer>
       <Left>
         <img src={photoURL} alt="user" />
+        <h2>{username}</h2>
+        <span>{relation}</span>
       </Left>
       <Right>
-        <div>{username}</div>
-        <div>{relation}</div>
-        <div>{bodyText}</div>
+        <pre>{bodyText}</pre>
       </Right>
     </MsgContainer>
   );
@@ -22,19 +22,36 @@ const MsgContainer = styled.div`
   position: relative;
   display: flex;
   width: 100%;
-  background-color: #e5e5e5;
   padding: 1.5rem;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  color: #000000;
 `;
 
 const Left = styled.div`
   width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   img {
-    width: 80%;
+    width: 50%;
     border-radius: 50%;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  span {
+    font-size: 0.8rem;
+    color: #414141;
   }
 `;
 
 const Right = styled.div`
   width: 80%;
+  font-size: 1rem;
 `;

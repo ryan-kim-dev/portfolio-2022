@@ -18,5 +18,11 @@ function Logout({ setIsLoggedIn }) {
 export default Logout;
 
 const LogoutButton = styled.div`
+  font-family: 'Oswald', sans-serif;
   cursor: pointer;
+  border-bottom: 2px solid #000000;
+
+  &:hover {
+    color: red;
+  }
 `;

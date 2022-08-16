@@ -4,6 +4,7 @@ import { db } from '../../firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import { Container } from '../../GlobalStyle';
 import Message from './Message';
+import SectionTitle from '../common/SectionTitle';
 import Auth from './Auth';
 function MessageLists() {
   const [messages, setMessages] = useState([]);
@@ -21,7 +22,8 @@ function MessageLists() {
 
   return (
     <ListContainer>
-      <ListWrapper>
+      <SectionTitle title={'Testimonials'} />
+      <ListWrapper className="text-dark">
         {messages.map((message, idx) => {
           return (
             <Message
@@ -34,16 +36,24 @@ function MessageLists() {
             />
           );
         })}
+        <Auth />
       </ListWrapper>
-      <Auth />
     </ListContainer>
   );
 }
 
 export default MessageLists;
 
-const ListContainer = styled(Container)`
-  border: 1px solid black;
-`;
+const ListContainer = styled(Container)``;
 
-const ListWrapper = styled.div``;
+const ListWrapper = styled.div`
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(40px);
+  padding: 3em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;

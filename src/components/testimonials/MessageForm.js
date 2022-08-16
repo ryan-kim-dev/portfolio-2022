@@ -15,8 +15,8 @@ const MessageForm = ({ method }) => {
     uid: localStorage.uid,
   });
   const onSubmit = async e => {
-    e.preventDefault();
     // 참고 : https://firebase.google.com/docs/firestore/manage-data/add-data?hl=ko&authuser=0
+    e.preventDefault();
 
     const createMessage = async () => {
       const newRef = doc(db, 'messages', `${message.uid}`);
@@ -66,7 +66,7 @@ const MessageForm = ({ method }) => {
   };
 
   const onChange = e => {
-    const { name, value } = e.target;
+    let { name, value } = e.target;
     setMessage(prev => ({
       ...prev, // 기존 객체 복사 (spread)
       [name]: value,
@@ -88,7 +88,7 @@ const MessageForm = ({ method }) => {
             <span>{`추천사 ${method}`}</span>
           </div>
           <div>
-            <input
+            <Input
               onChange={onChange}
               type="text"
               name="username"
@@ -96,7 +96,7 @@ const MessageForm = ({ method }) => {
             />
           </div>
           <div>
-            <input
+            <Input
               onChange={onChange}
               type="text"
               name="relation"
@@ -104,15 +104,14 @@ const MessageForm = ({ method }) => {
             />
           </div>
           <div>
-            <input
+            <Textarea
               onChange={onChange}
-              type="textarea"
               name="bodyText"
               placeholder="남겨주신 한글자 한글자가 큰 힘이 됩니다. 감사합니다!!"
             />
           </div>
           <div>
-            <input type="submit" value={method} />
+            <Input type="submit" value={method} />
           </div>
         </>
       )}
@@ -129,4 +128,13 @@ const FormContainer = styled.form`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`;
+
+const Input = styled.input`
+  width: 400px;
+`;
+
+const Textarea = styled.textarea`
+  width: 400px;
+  height: 150px;
 `;

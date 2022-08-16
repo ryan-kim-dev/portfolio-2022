@@ -69,18 +69,19 @@ function Auth() {
 export default Auth;
 
 const AuthWrapper = styled.div`
-  background-color: lightgray;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   /* justify-content: space-between; */
-  width: 100vw;
+  width: max-content;
   /* height: 50px; */
 `;
 
 const UserInfoArea = styled.div`
   display: flex;
+  column-gap: 0.7rem;
 `;
 
 const UserPic = styled.img`
@@ -89,6 +90,7 @@ const UserPic = styled.img`
 `;
 
 const LoginButton = styled.button`
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
   border-radius: 7px;
   background: none;
   white-space: nowrap;
@@ -97,7 +99,7 @@ const LoginButton = styled.button`
   color: #fff;
   background-color: black;
   outline: none;
-  border: 2px solid #fff;
+  border: none;
   cursor: pointer;
   overflow: hidden;
   position: relative;
