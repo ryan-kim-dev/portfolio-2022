@@ -42,7 +42,7 @@ const Left = styled.div`
   }
 
   h2 {
-    font-size: 1.2rem;
+    font-size: 14px;
   }
 
   span {
@@ -53,5 +53,6 @@ const Left = styled.div`
 
 const Right = styled.div`
   width: 80%;
-  font-size: 1rem;
+  font-size: 13px;
+  padding: 10px;
 `;

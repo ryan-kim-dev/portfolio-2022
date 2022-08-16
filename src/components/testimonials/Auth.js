@@ -37,7 +37,7 @@ function Auth() {
 
   return (
     <AuthWrapper>
-      {localStorage.getItem('loginStatus') === 'true' ? (
+      {localStorage.loginStatus === 'true' ? (
         <>
           <UserInfoArea>
             <div>
@@ -47,7 +47,7 @@ function Auth() {
                 alt="profile"
               />
             </div>
-            <div>{localStorage.getItem('displayName')}님, 반갑습니다!</div>
+            <div>{localStorage.displayName}님, 반갑습니다!</div>
           </UserInfoArea>
           <Links />
           <Logout setIsLoggedIn={setIsLoggedIn} />

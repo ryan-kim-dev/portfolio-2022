@@ -35,6 +35,7 @@ const Contact = () => {
       <SectionTitle title={'Contact'} />
       <FormContainer className="text-dark">
         <SocialTab>
+          <SubTitle>Contact Me!</SubTitle>
           <Img
             src="https://avatars.githubusercontent.com/u/78180055?v=4"
             alt="profile"
@@ -82,7 +83,7 @@ const Contact = () => {
               placeholder="본문을 입력해주세요"
             />
           </Div>
-          <Input type="submit" className="submit-btn" value="Send Message" />
+          <Input type="submit" className="submit-btn" value="Send Email" />
         </Form>
       </FormContainer>
     </ContactContainer>
@@ -111,13 +112,21 @@ const SocialTab = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  row-gap: 1rem;
   width: 50%;
   text-align: center;
 
   h2 {
     letter-spacing: 0.1rem;
   }
+`;
+
+const SubTitle = styled.div`
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  color: #374999;
+  letter-spacing: 0.1rem;
 `;
 
 const Img = styled.img`
@@ -174,6 +183,7 @@ const Input = styled.input`
 
     :hover {
       color: #bebebe;
+      border: 2px solid #bebebe;
     }
   }
 `;

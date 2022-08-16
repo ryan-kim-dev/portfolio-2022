@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import styled from 'styled-components';
 import Spline from '@splinetool/react-spline';
 import { Container } from '../GlobalStyle';
 
 const Home = () => {
+  const MemoizeSplineObj = useMemo(() => {
+    return (
+      <Scene scene="https://prod.spline.design/zo7-TU0uJWfVO-Ye/scene.splinecode" />
+    );
+  }, []);
+
   return (
     <HomeContainer id="home">
       <SceneWrapper>
-        {window.screen.width > 400 && (
-          <Scene scene="https://prod.spline.design/zo7-TU0uJWfVO-Ye/scene.splinecode" />
-        )}
+        {window.screen.width > 400 && MemoizeSplineObj}
       </SceneWrapper>
 
       <TextSection>

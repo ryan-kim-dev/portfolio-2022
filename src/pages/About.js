@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Container } from '../GlobalStyle';
 import SectionTitle from '../components/common/SectionTitle';
 import ContactLinks from '../components/common/ContactLinks';
-
+import Tab from '../components/about/Tab';
 function About() {
   const titles = ['SKILLS', 'PATH', 'PROJECTS'];
 
@@ -35,7 +35,7 @@ function About() {
         </Header>
         <Divider />
         <Title>{titles[0]}</Title>
-        <div>skills 들어갈 자리</div>
+        <Tab />
         <Divider />
         <Title>{titles[1]}</Title>
         <LowerArea>
@@ -132,8 +132,8 @@ const Greeting = styled.div`
 
   .text-3 {
     font-size: 1.5em;
-    color: blueviolet;
-
+    color: #374999;
+    font-weight: 500;
     /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
     @media all and (max-width: 479px) {
     }

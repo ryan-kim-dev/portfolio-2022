@@ -37,6 +37,7 @@ const App = () => {
       <ThemeContext.Provider value={(theme, toggleTheme)}>
         <div className="App" id={theme}>
           <GlobalStyle />
+
           <ScrollToTop />
           <NavContainer>
             <NavLists className="nav">

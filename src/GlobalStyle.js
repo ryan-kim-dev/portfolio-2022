@@ -24,6 +24,9 @@ body {
     color: #e5e5e5;
   }
 
+  #light .text-dark {
+    color: #000000;
+  }
   /* About 페이지 테마 변경시 별도 색상값*/
   #dark .skills {
     color: #414141;
