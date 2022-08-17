@@ -1,6 +1,8 @@
 const functions = require('firebase-functions');
-
 const nodemailer = require('nodemailer');
+const cors = require('cors')({
+  origin: true,
+});
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -16,7 +18,6 @@ const transporter = nodemailer.createTransport({
 const sendContactForm = form => {
   return transporter.sedMail({
     subject: '포트폴리오 앱에서 발송된 이메일입니다.',
-    bcc: ['ryankim.h.dev@gmail.com'],
     html: `<h3></h3>
     <p>Name: ${form.name}</p>
     <p>Address: ${form.email}</p>
@@ -28,7 +29,7 @@ const sendContactForm = form => {
 
 exports.contactForm = functions.https.onRequest((req, res) => {
   if (req.body.secret !== 'firebaseIsCool') return res.send('Missing secret');
-  sendContactForm(req.body);
+  return cors(sendContactForm(req.body));
 });
 
 //   const mailOption = {
