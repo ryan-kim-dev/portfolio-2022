@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SectionTitle from '../components/common/SectionTitle';
 import { Container } from '../GlobalStyle';
 import styled from 'styled-components';
@@ -6,28 +6,38 @@ import ContactLinks from '../components/common/ContactLinks';
 // import axios from 'axios';
 // import { axiosInstance } from '../config';
 const Contact = () => {
-  // const [data, setData] = useState({
-  //   yourname: '',
-  //   youremail: '',
-  //   yoursubject: '',
-  //   yourmessage: '',
-  // });
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
 
   const onChange = e => {
     e.preventDefault();
-    // const { name, value } = e.target;
-    // setData(prev => ({
-    //   ...prev, // 기존 객체 복사 (spread)
-    //   [name]: value,
-    //   // input에 부여된 name 속성의 값을 key로, name 키를 가진 값을 value로 설정.
-    //   // [] 로 감싸 key 값을 동적으로 받는다.
-    //   // 참고 : https://kjhg478.tistory.com/27
-    // }));
+    const { name, value } = e.target;
+    setForm(prev => ({
+      ...prev, // 기존 객체 복사 (spread)
+      [name]: value,
+      // input에 부여된 name 속성의 값을 key로, name 키를 가진 값을 value로 설정.
+      // [] 로 감싸 key 값을 동적으로 받는다.
+      // 참고 : https://kjhg478.tistory.com/27
+    }));
   };
 
   const onSubmit = async e => {
     e.preventDefault();
-    alert('아직 구현중입니다 ㅜㅜ');
+    fetch('/mail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ ...form, secret: 'firebaseIsCool' }),
+    })
+      .then(res => {
+        console.log(res.form);
+      })
+      .catch(err => alert(`${err}`));
   };
 
   return (
@@ -54,30 +64,25 @@ const Contact = () => {
         >
           <Div>
             <Label htmlFor="name">Name</Label>
-            <Input type="text" name="yourname" id="name" placeholder="성함" />
+            <Input type="text" name="name" id="name" placeholder="성함" />
           </Div>
           <Div>
             <Label htmlFor="email">Address</Label>
             <Input
               type="email"
-              name="youremail"
+              name="email"
               id="email"
               placeholder="메일주소"
             />
           </Div>
           <Div>
             <Label htmlFor="subject">Title</Label>
-            <Input
-              type="text"
-              name="yoursubject"
-              id="subject"
-              placeholder="제목"
-            />
+            <Input type="text" name="subject" id="subject" placeholder="제목" />
           </Div>
           <Div>
             <Label htmlFor="message">Message</Label>
             <textarea
-              name="yourmessage"
+              name="message"
               id="message"
               required
               placeholder="본문을 입력해주세요"
