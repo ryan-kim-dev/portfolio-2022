@@ -5,8 +5,6 @@ import { db } from '../../firebase';
 import { doc, setDoc, deleteDoc } from 'firebase/firestore';
 
 const MessageForm = ({ method }) => {
-  console.log(localStorage.uid);
-
   const [message, setMessage] = useState({
     username: '',
     relation: '',
