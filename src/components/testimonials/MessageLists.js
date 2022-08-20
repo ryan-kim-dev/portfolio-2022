@@ -14,7 +14,7 @@ function MessageLists() {
     const messagesCollectionRef = collection(db, 'messages');
     const getMessages = async () => {
       const data = await getDocs(messagesCollectionRef);
-      console.log('db get요청 횟수 체크용');
+
       setMessages(data.docs.map(doc => ({ ...doc.data(), id: doc.id })));
     };
     getMessages();

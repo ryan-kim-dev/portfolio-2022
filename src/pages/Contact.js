@@ -24,9 +24,9 @@ const Contact = () => {
           </div>
           <ContactLinks />
         </SocialTab>
-        <Iframe
+        <Mailer
           url="https://micro-app-mailer.herokuapp.com/"
-          width="800px"
+          width="600px"
           height="max-content"
           id="myId"
           className="myClassname"
@@ -47,7 +47,6 @@ const FormContainer = styled.div`
   background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(40px);
   padding: 3em 3em 3em 0;
-
   width: 800px;
   display: flex;
 
@@ -81,3 +80,5 @@ const Img = styled.img`
   width: 50%;
   border-radius: 50%;
 `;
+
+const Mailer = styled(Iframe)``;
