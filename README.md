@@ -6,6 +6,7 @@
 
 ### 클라이언트
 - 라이브러리: React(CRA)
+- 상태관리: Redux, Context
 - 스타일링: styled-components(CSS), react-spline(3d object)
 
 ### 백엔드
