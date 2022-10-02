@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import { FaAngleDoubleUp } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleUp } from '@fortawesome/free-regular-svg-icons';
 import styled from 'styled-components';

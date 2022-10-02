@@ -14,48 +14,13 @@ body {
   display:flex;
   flex-direction: column;
   overflow-x: hidden;
-  
-  #light {
-    background-color: #ededed;
-    color: #414141;
-  }
-  #dark {
-    background-color: #202020;
-    color: #e5e5e5;
-  }
-
-  #light .text-dark {
-    color: #000000;
-  }
-  /* About 페이지 테마 변경시 별도 색상값*/
-  #dark .skills {
-    color: #414141;
-  }
-  #dark .text-dark {
-    color: #000000;
-  }
-/* Home 페이지 nav item 테마 변경시 별도 색상값 */
-  #dark .nav {
-    color: #e5e5e5;
-  }
-  /* Works 페이지 테마 변경시 별도 색상값 */
-  #dark .project-detail {
-    color: #414141;
-  }
-
-  @media all and (min-width: 768px) and (max-width: 1023px) {
-  }
-
-  /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
-  @media all and (min-width: 480px) and (max-width: 767px) {
-  }
+  background-color: #202020;
+  color: #e5e5e5;
 
   /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
   @media all and (max-width: 479px) {
    
   }
-
-   
 }
 `;
 

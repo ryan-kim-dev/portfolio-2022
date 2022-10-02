@@ -33,10 +33,8 @@ function About() {
             </Intro>
           </Greeting>
         </Header>
-        <Divider />
         <Title>{titles[0]}</Title>
         <Tab />
-        <Divider />
         <Title>{titles[1]}</Title>
         <LowerArea>
           <Career>
@@ -72,7 +70,7 @@ const AboutSection = styled.div`
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(40px);
   padding: 3rem;
-
+  color: black;
   display: flex;
   width: 70%;
   flex-direction: column;
@@ -148,8 +146,6 @@ const Intro = styled.div`
   @media all and (max-width: 479px) {
   }
 `;
-
-const Divider = styled.hr``;
 
 const Title = styled.h2`
   font-family: 'Oswald', sans-serif;

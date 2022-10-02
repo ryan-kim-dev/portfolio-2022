@@ -82,6 +82,7 @@ const ContactContainer = styled(Container)``;
 
 const FormContainer = styled.div`
   z-index: 1;
+  color: black;
   background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(40px);
   padding: 3em 3em 3em 0;
