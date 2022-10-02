@@ -21,7 +21,7 @@ const Contact = () => {
         result => {
           console.log(result.text);
           alert('메일을 전송하였습니다. 감사합니다!');
-          window.location.reload();
+          e.target.reset();
         },
         error => {
           console.log(error.text);
