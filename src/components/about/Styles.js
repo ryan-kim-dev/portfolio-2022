@@ -8,6 +8,8 @@ export const AboutContainer = styled(Container)`
   color: black;
   width: 70%;
   row-gap: 3rem;
+  display: flex;
+  justify-content: center;
   /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
   @media all and (max-width: 479px) {
     width: 100%;

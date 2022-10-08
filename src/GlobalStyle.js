@@ -42,8 +42,7 @@ export default GlobalStyle;
 // }
 
 export const Layout = styled.main`
-  border: 5px solid green;
-  width: 100vw;
+  width: 100%;
   height: ${({ about }) => (about ? 'max-content' : '100vh')};
   display: flex;
   justify-content: center;
@@ -66,7 +65,6 @@ export const Container = styled.div`
   align-items: center;
   height: max-content;
 
-  border: 3px solid blue;
   color: black;
   padding: 0 160px;
   @media screen and (max-width: 479px) {
