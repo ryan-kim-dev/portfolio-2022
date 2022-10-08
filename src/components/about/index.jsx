@@ -5,7 +5,7 @@ import ContactLinks from '../common/ContactLinks';
 import Tab from './Tab';
 import Career from './Career';
 
-function AboutContent() {
+function About() {
   const titles = ['SKILLS', 'PATH', 'PROJECTS'];
 
   return (
@@ -47,4 +47,4 @@ function AboutContent() {
   );
 }
 
-export default AboutContent;
+export default About;

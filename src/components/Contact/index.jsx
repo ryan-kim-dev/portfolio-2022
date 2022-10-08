@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import * as S from './Styles';
 import ContactLinks from '../common/ContactLinks';
 import Mailer from './Mailer';
