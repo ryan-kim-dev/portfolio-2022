@@ -1,10 +1,10 @@
 import React from 'react';
-import About from '../components/About';
+import AboutContent from '../components/About';
 
 function AboutPage() {
   return (
     <>
-      <About />
+      <AboutContent />
     </>
   );
 }
