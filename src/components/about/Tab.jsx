@@ -24,9 +24,10 @@ function Tab() {
       imgUrl: 'https://fontawesomeicons.com/lib/svg/logo-javascript.svg',
       description: (
         <p>
-          map, filter, reduce 메서드를 이해하고, <br />
-          ES6 디스트럭쳐링 문법과 전개연산자를 사용하여 서버로부터 받아온
-          데이터를 의도한 대로 화면에 렌더링 할 수 있습니다. <br />
+          map, filter, reduce 메서드를 이해하고 ES6 디스트럭쳐링 문법과
+          전개연산자를 사용하여 <br />
+          서버로부터 받아온 데이터를 의도한 대로 화면에 렌더링 할 수 있습니다.{' '}
+          <br />
           promise에 대해 이해하고 then 체이닝 또는 try-catch 문법으로 비동기
           작업을 처리할 수 있습니다.
         </p>

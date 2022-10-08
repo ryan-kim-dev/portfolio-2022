@@ -22,6 +22,7 @@ export const AboutSection = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 30px 0;
 `;
 
 export const Header = styled.header`
