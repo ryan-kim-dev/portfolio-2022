@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import ContactLinks from '../components/common/ContactLinks';
 import emailjs from '@emailjs/browser';
 
-const Contact = () => {
+function ContactPage() {
   const form = useRef();
 
   const onSubmit = async e => {
@@ -31,7 +31,7 @@ const Contact = () => {
 
   return (
     <ContactContainer id="contact">
-      <SectionTitle title={'Contact'} />
+      {/* <SectionTitle title={'Contact'} /> */}
       <FormContainer className="text-dark">
         <SocialTab>
           <SubTitle>Contact Me!</SubTitle>
@@ -74,9 +74,9 @@ const Contact = () => {
       </FormContainer>
     </ContactContainer>
   );
-};
+}
 
-export default Contact;
+export default ContactPage;
 
 const ContactContainer = styled(Container)``;
 

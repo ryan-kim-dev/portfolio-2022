@@ -1,15 +1,15 @@
 import React from 'react';
-import MessageLists from '../components/testimonials/MessageLists';
+import MessageLists from '../components/Testimonials/MessageLists';
 
 // import Links from '../components/testimonials/Links';
 import { Container } from '../GlobalStyle';
 
-const Testimonials = () => {
+function TestimonialPage() {
   return (
     <Container id="testimonials">
       <MessageLists />
     </Container>
   );
-};
+}
 
-export default Testimonials;
+export default TestimonialPage;

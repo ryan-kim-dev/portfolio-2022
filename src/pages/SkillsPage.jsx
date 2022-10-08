@@ -2,12 +2,12 @@ import React from 'react';
 import SectionTitle from '../components/common/SectionTitle';
 import { Container } from '../GlobalStyle';
 
-const Skills = () => {
+function SkillsPage() {
   return (
     <Container id="skills">
       <SectionTitle title={'Skills'} />
     </Container>
   );
-};
+}
 
-export default Skills;
+export default SkillsPage;

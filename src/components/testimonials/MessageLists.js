@@ -4,7 +4,7 @@ import { db } from '../../firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import { Container } from '../../GlobalStyle';
 import Message from './Message';
-import SectionTitle from '../common/SectionTitle';
+// import SectionTitle from '../common/SectionTitle';
 import Auth from './Auth';
 function MessageLists() {
   const [messages, setMessages] = useState([]);
@@ -22,7 +22,7 @@ function MessageLists() {
 
   return (
     <ListContainer>
-      <SectionTitle title={'Testimonials'} />
+      {/* <SectionTitle title={'Testimonials'} /> */}
       <ListWrapper className="text-dark">
         {messages.map((message, idx) => {
           return (

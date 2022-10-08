@@ -1,41 +1,17 @@
-import React, { useMemo } from 'react';
 import styled from 'styled-components';
 import Spline from '@splinetool/react-spline';
-import { Container } from '../GlobalStyle';
 
-const Home = () => {
-  const MemoizeSplineObj = useMemo(() => {
-    return (
-      <Scene scene="https://prod.spline.design/zo7-TU0uJWfVO-Ye/scene.splinecode" />
-    );
-  }, []);
+import { Container } from '../../GlobalStyle';
 
-  return (
-    <HomeContainer id="home">
-      <SceneWrapper>
-        {window.screen.width > 400 && MemoizeSplineObj}
-      </SceneWrapper>
+export const HomeContainer = styled(Container)``;
 
-      <TextSection>
-        <Text>HI, I'M</Text>
-        <Text>RYAN KIM.</Text>
-      </TextSection>
-    </HomeContainer>
-  );
-};
-
-export default Home;
-
-const HomeContainer = styled(Container)``;
-
-const SceneWrapper = styled.div`
+export const SceneWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
   position: fixed;
   z-index: 0;
+
   /* 테블릿 세로 (해상도 768px ~ 1023px)*/
   @media all and (min-width: 768px) and (max-width: 1023px) {
     transform: scale(0.7) translateX(600px);
@@ -54,7 +30,7 @@ const SceneWrapper = styled.div`
     display: none;
   }
 `;
-const Scene = styled(Spline)`
+export const Scene = styled(Spline)`
   position: absolute;
 
   /* 테블릿 세로 (해상도 768px ~ 1023px)*/
@@ -76,7 +52,7 @@ const Scene = styled(Spline)`
   }
 `;
 
-const TextSection = styled.div`
+export const TextSection = styled.div`
   /* z-index: 1; */
   position: absolute;
   left: 200px;
@@ -99,20 +75,13 @@ const TextSection = styled.div`
   }
 `;
 
-const Text = styled.p`
+export const Text = styled.p`
   display: flex;
   flex-direction: column;
   max-width: 500px;
   flex-wrap: wrap;
   font-weight: 500;
-
-  /* 테블릿 세로 (해상도 768px ~ 1023px)*/
-  @media all and (min-width: 768px) and (max-width: 1023px) {
-  }
-
-  /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
-  @media all and (min-width: 480px) and (max-width: 767px) {
-  }
+  color: #ededed;
 
   /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
   @media all and (max-width: 479px) {

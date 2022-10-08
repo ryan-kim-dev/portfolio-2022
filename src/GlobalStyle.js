@@ -41,16 +41,37 @@ export default GlobalStyle;
 // @media all and (max-width: 479px) {
 // }
 
+export const Layout = styled.main`
+  border: 5px solid green;
+  width: 100vw;
+  height: ${({ about }) => (about ? 'max-content' : '100vh')};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: scroll;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  /* max-width: 1330px; */
+  margin: 0 auto;
+  @media screen and (max-width: 479px) {
+  }
+`;
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  margin-right: auto;
-  margin-left: auto;
+  height: max-content;
+
+  border: 3px solid blue;
+  color: black;
+  padding: 0 160px;
+  @media screen and (max-width: 479px) {
+    padding: 0;
+  }
 `;
 
 export const ModalContainer = styled.div`

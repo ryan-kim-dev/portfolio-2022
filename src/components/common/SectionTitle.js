@@ -24,6 +24,7 @@ const SectionTitleWrapper = styled.div`
 `;
 
 const SectionTitleText = styled.h2`
+  color: #e5e5e5;
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
   letter-spacing: 0.5rem;

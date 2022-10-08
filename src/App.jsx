@@ -1,15 +1,16 @@
 import React, { useRef, Suspense } from 'react';
 import { scrollToSection } from './utils/scrollToSection';
-import GlobalStyle from './GlobalStyle';
+import GlobalStyle, { Layout } from './GlobalStyle';
 
 // component
 const Nav = React.lazy(() => import('./components/common/Nav'));
+
 // pages
-const About = React.lazy(() => import('./pages/About'));
-const Contact = React.lazy(() => import('./pages/Contact'));
-const Home = React.lazy(() => import('./pages/Home'));
-const Works = React.lazy(() => import('./pages/Works'));
-const Testimonials = React.lazy(() => import('./pages/Testimonials'));
+const AboutPage = React.lazy(() => import('./pages/AboutPage'));
+const ContactPage = React.lazy(() => import('./pages/ContactPage'));
+const MainPage = React.lazy(() => import('./pages/MainPage'));
+const WorksPage = React.lazy(() => import('./pages/WorksPage'));
+const TestimonialPage = React.lazy(() => import('./pages/TestimonialPage'));
 // const ScrollToTop = React.lazy(() => import('./components/common/ScrollToTop'));
 const Loading = React.lazy(() => import('./components/common/Loading'));
 
@@ -37,22 +38,22 @@ const App = () => {
           />
         )}
 
-        <div ref={home}>
-          <Home />
-        </div>
-        <div ref={about}>
-          <About />
-        </div>
+        <Layout ref={home}>
+          <MainPage />
+        </Layout>
+        <Layout about ref={about}>
+          <AboutPage />
+        </Layout>
 
-        <div ref={works}>
-          <Works />
-        </div>
-        <div ref={testimonials}>
-          <Testimonials />
-        </div>
-        <div ref={contact}>
-          <Contact />
-        </div>
+        <Layout ref={works}>
+          <WorksPage />
+        </Layout>
+        <Layout ref={testimonials}>
+          <TestimonialPage />
+        </Layout>
+        <Layout ref={contact}>
+          <ContactPage />
+        </Layout>
       </div>
     </Suspense>
   );
