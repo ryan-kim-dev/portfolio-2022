@@ -1,11 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
-// import SectionTitle from '../components/common/SectionTitle';
-import { Container } from '../GlobalStyle';
-import Row from '../components/Works/Row';
+import Works from '../components/Works';
 
 function WorksPage() {
-  return <div>제작중 입니다</div>;
+  return <Works />;
 }
 
 export default WorksPage;
