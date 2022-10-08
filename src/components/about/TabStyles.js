@@ -57,7 +57,7 @@ export const Left = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   row-gap: 0.5rem;
   /* border: 1px solid yellow; */
@@ -78,8 +78,8 @@ export const Right = styled.div`
   height: 100%;
   font-size: 1rem;
 
-  pre {
-    /* 스타일 안먹음... */
+  p {
+    text-align: center;
   }
 
   @media screen and (max-width: 479px) {
