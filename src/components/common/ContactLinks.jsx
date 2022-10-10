@@ -30,7 +30,10 @@ function ContactLinks() {
         notion
       </LinkBtn>
       <LinkBtn>
-        <A href="#" target="_blank">
+        <A
+          href="https://docs.google.com/document/d/1TxJczs3y0zcroO8gET0XCwGdNpfOIgVuUn_sYKTvLnk/edit#heading=h.wud1wiwbg3o"
+          target="_blank"
+        >
           <CgFileDocument />
         </A>
         resume
