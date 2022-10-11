@@ -10,7 +10,7 @@ function Message({ username, relation, bodyText, photoURL }) {
         <span>{relation}</span>
       </Left>
       <Right>
-        <pre>{bodyText}</pre>
+        <span>{bodyText}</span>
       </Right>
     </MsgContainer>
   );
@@ -21,12 +21,16 @@ export default Message;
 const MsgContainer = styled.div`
   position: relative;
   display: flex;
-  width: 100%;
+  width: 50%;
   padding: 1.5rem;
   margin-bottom: 1rem;
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
   color: #000000;
+
+  @media screen and (max-width: 479px) {
+    width: 100%;
+  }
 `;
 
 const Left = styled.div`
