@@ -10,7 +10,7 @@ function Message({ username, relation, bodyText, photoURL }) {
         <span>{relation}</span>
       </Left>
       <Right>
-        <span>{bodyText}</span>
+        <pre>{bodyText}</pre>
       </Right>
     </MsgContainer>
   );
