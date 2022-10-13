@@ -21,6 +21,9 @@ export default Message;
 const MsgContainer = styled.div`
   position: relative;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 50%;
   padding: 1.5rem;
   margin-bottom: 1rem;
@@ -44,16 +47,22 @@ const Left = styled.div`
     border-radius: 50%;
   }
   h2 {
-    font-size: 14px;
+    font-size: 16px;
   }
   span {
     font-size: 0.8rem;
     color: #414141;
+    width: 80px;
+    text-align: center;
   }
 `;
 
 const Right = styled.div`
-  width: 80%;
+  /* width: 80%; */
   font-size: 13px;
   padding: 10px;
+
+  @media screen and (max-width: 479px) {
+    padding: 5px;
+  }
 `;

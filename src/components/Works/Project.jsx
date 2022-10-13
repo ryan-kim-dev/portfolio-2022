@@ -15,24 +15,34 @@ function Project({
   return (
     <div>
       <S.ProjectArticle>
-        <S.Left>
+        <S.CoverWrapper>
           <S.ProjectTitle>{title}</S.ProjectTitle>
-          <S.ProjectCover>
-            <S.CoverImg src={cover} />
-          </S.ProjectCover>
+          {youtube === '' ? (
+            <S.ProjectCover>
+              <S.CoverImg src={cover} />
+            </S.ProjectCover>
+          ) : (
+            <S.YoutubeIframe
+              src={youtube}
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            />
+          )}
           <DetailLinks
             deploy={deploy}
             youtube={youtube}
             github={github}
             notion={notion}
           />
-        </S.Left>
-        <S.Right>
+        </S.CoverWrapper>
+        <S.DescWrapper>
           <S.Heading>설명</S.Heading>
           <S.DescText>{description}</S.DescText>
           <S.Heading>담당 작업</S.Heading>
           <S.DescText>{role}</S.DescText>
-        </S.Right>
+        </S.DescWrapper>
       </S.ProjectArticle>
     </div>
   );

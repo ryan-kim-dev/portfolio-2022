@@ -28,7 +28,7 @@ export default GlobalStyle;
 
 export const Layout = styled.main`
   width: 100%;
-  height: ${({ about }) => (about ? 'max-content' : '100vh')};
+  height: ${({ max }) => (max ? 'max-content' : '100vh')};
   display: flex;
   justify-content: center;
   align-items: center;

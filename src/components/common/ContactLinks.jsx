@@ -11,14 +11,14 @@ function ContactLinks() {
       <LinkBtn>
         <A href="https://github.com/ryan-kim-dev" target="_blank">
           <TbBrandGithub />
+          github
         </A>
-        github
       </LinkBtn>
       <LinkBtn>
         <A href="https://ryan-kim-dev.tistory.com/" target="_blank">
           <RiHome3Line />
+          blog
         </A>
-        blog
       </LinkBtn>
       <LinkBtn>
         <A
@@ -26,8 +26,8 @@ function ContactLinks() {
           target="_blank"
         >
           <SiNotion />
+          notion
         </A>
-        notion
       </LinkBtn>
       <LinkBtn>
         <A
@@ -35,8 +35,8 @@ function ContactLinks() {
           target="_blank"
         >
           <CgFileDocument />
+          resume
         </A>
-        resume
       </LinkBtn>
     </Container>
   );
@@ -58,9 +58,18 @@ const LinkBtn = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
 `;
 
 const A = styled.a`
   color: inherit;
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;

@@ -43,12 +43,12 @@ const App = () => {
         <Layout ref={home}>
           <MainPage />
         </Layout>
-        <Layout about ref={about}>
+        <Layout about ref={about} max>
           <SectionTitle title="about me" />
           <AboutPage />
         </Layout>
 
-        <Layout ref={works}>
+        <Layout ref={works} max>
           <SectionTitle title="works" />
           <WorksPage />
         </Layout>

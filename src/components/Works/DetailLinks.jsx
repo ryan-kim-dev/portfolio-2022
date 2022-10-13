@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SiNotion } from 'react-icons/si';
 import { RiHome3Line } from 'react-icons/ri';
 import { CgFileDocument } from 'react-icons/cg';
 import { TbBrandGithub } from 'react-icons/tb';
@@ -11,20 +10,20 @@ function DetailLinks({ deploy, youtube, github, notion }) {
       <LinkBtn>
         <A href={deploy} target="_blank">
           <RiHome3Line />
+          배포 링크
         </A>
-        배포 링크
       </LinkBtn>
       <LinkBtn>
         <A href={github} target="_blank">
           <TbBrandGithub />
+          깃허브
         </A>
-        깃허브
       </LinkBtn>
       <LinkBtn>
         <A href={notion} target="_blank">
           <CgFileDocument />
+          작업기록
         </A>
-        작업기록
       </LinkBtn>
     </Container>
   );
@@ -46,9 +45,19 @@ const LinkBtn = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
 `;
 
 const A = styled.a`
   color: inherit;
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
 `;

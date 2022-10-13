@@ -17,14 +17,15 @@ export const team = [
   {
     id: 1,
     title: `STAY, BUDDY`,
-    description: `리액트로 제작한 개인 포트폴리오 웹 사이트 입니다.`,
+    description: `스테이버디는 반려견이 있는 유저들이 서로의 애완동물에 관한 정보와 소식을 공유하는 애완 동물 소셜 커뮤니티며 유기견에 대한 정보를 노출 시켜 반려동물의 입양을 장려하는 프로그레시브 웹 앱(progressive web app) 입니다.
+
+    `,
     role: `팀장으로 프로젝트에 참여하였습니다.
     회원가입, 로그인, SNS 게시글 작성, 카카오 지도, 3d 구현을 담당하였습니다.
     `,
     coverURL: 'https://i.imgur.com/5taAPIK.png',
     deployURL: 'https://staybuddy.netlify.app/',
-    youtubeURL:
-      'https://www.youtube.com/watch?v=ncnuPIOZ6cU&list=LL_WCu5ndMnepWS7xccdpX2A',
+    youtubeURL: 'https://www.youtube.com/embed/ncnuPIOZ6cU',
     githubURL: 'https://github.com/ryan-kim-dev/seb39_main_025_fork',
     notionURL:
       'https://handsome-parcel-51e.notion.site/2-STAY-BUDDY-090dc1be97474b0486d009f02d270b1c',
