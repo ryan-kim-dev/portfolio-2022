@@ -24,7 +24,7 @@ const App = () => {
   const testimonials = useRef(null);
   const contact = useRef(null);
 
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState(`${localStorage.theme}`);
 
   const switchTheme = () => {
     return setTheme(localStorage.theme);

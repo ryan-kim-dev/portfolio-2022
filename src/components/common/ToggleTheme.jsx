@@ -15,8 +15,16 @@ function ToggleTheme({ theme, setTheme, switchTheme }) {
   return (
     <>
       <ToggleContainer onClick={toggleHandler}>
-        <div className={`toggle-container ${isOn ? 'toggle--checked' : ''}`} />
-        <div className={`toggle-circle ${isOn ? 'toggle--checked' : ''}`} />
+        <div
+          className={`toggle-container ${
+            isOn || localStorage.theme === 'dark' ? 'toggle--checked' : ''
+          }`}
+        />
+        <div
+          className={`toggle-circle ${
+            isOn || localStorage.theme === 'dark' ? 'toggle--checked' : ''
+          }`}
+        />
       </ToggleContainer>
       <Desc className={isOn ? 'toggle-on' : 'toggle-off'}>
         <span>{isOn ? 'Toggle Switch ON' : 'Toggle Switch OFF'}</span>
@@ -76,5 +84,6 @@ const Desc = styled.div`
   }
 
   span {
+    color: transparent;
   }
 `;
