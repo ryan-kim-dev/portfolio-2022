@@ -13,7 +13,7 @@ export default SectionTitle;
 const SectionTitleWrapper = styled.div`
   position: absolute;
   left: 0;
-  top: 1rem;
+  margin-bottom: 800px;
   transform-origin: left top;
   transform: rotate(-90deg) translateX(-100%);
   width: max-content;

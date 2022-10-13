@@ -1,6 +1,5 @@
 import React from 'react';
 import * as S from './Styles';
-import SectionTitle from '../common/SectionTitle';
 import ContactLinks from '../common/ContactLinks';
 import Tab from './Tab';
 import Career from './Career';
@@ -10,7 +9,6 @@ function About() {
 
   return (
     <S.AboutContainer>
-      <SectionTitle title="about me" />
       <S.AboutSection>
         <S.Header>
           <S.Cover>

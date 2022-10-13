@@ -1,5 +1,7 @@
 import React, { useRef, Suspense } from 'react';
 import { scrollToSection } from './utils/scrollToSection';
+import SectionTitle from './components/common/SectionTitle';
+
 import GlobalStyle, { Layout } from './GlobalStyle';
 
 // component
@@ -42,16 +44,20 @@ const App = () => {
           <MainPage />
         </Layout>
         <Layout about ref={about}>
+          <SectionTitle title="about me" />
           <AboutPage />
         </Layout>
 
         <Layout ref={works}>
+          <SectionTitle title="works" />
           <WorksPage />
         </Layout>
         <Layout ref={testimonials}>
+          <SectionTitle title="testimonials" />
           <TestimonialPage />
         </Layout>
         <Layout ref={contact}>
+          <SectionTitle title="contact" />
           <ContactPage />
         </Layout>
       </div>
