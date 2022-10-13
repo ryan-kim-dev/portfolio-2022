@@ -28,6 +28,7 @@ export const YoutubeIframe = styled(Iframe)`
   height: 550px;
 
   @media screen and (max-width: 479px) {
+    height: 100%;
   }
 `;
 
@@ -48,7 +49,7 @@ export const ProjectTitle = styled.h3`
 `;
 
 export const DescWrapper = styled.div`
-  width: 50%;
+  width: 80%;
 `;
 
 export const Heading = styled.h4`

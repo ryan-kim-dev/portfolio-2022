@@ -37,7 +37,7 @@ export const Layout = styled.main`
     display: none;
   }
   /* max-width: 1330px; */
-  margin: 0 auto;
+  margin: 30px 0;
   @media screen and (max-width: 479px) {
   }
 `;
