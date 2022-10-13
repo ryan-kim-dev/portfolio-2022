@@ -5,44 +5,32 @@ import { RiHome3Line } from 'react-icons/ri';
 import { CgFileDocument } from 'react-icons/cg';
 import { TbBrandGithub } from 'react-icons/tb';
 
-function ContactLinks() {
+function DetailLinks({ deploy, youtube, github, notion }) {
   return (
     <Container>
       <LinkBtn>
-        <A href="https://github.com/ryan-kim-dev" target="_blank">
-          <TbBrandGithub />
-        </A>
-        github
-      </LinkBtn>
-      <LinkBtn>
-        <A href="https://ryan-kim-dev.tistory.com/" target="_blank">
+        <A href={deploy} target="_blank">
           <RiHome3Line />
         </A>
-        blog
+        배포 링크
       </LinkBtn>
       <LinkBtn>
-        <A
-          href="https://handsome-parcel-51e.notion.site/275ad8a7ba9540a2bfea2d1597c8b563"
-          target="_blank"
-        >
-          <SiNotion />
+        <A href={github} target="_blank">
+          <TbBrandGithub />
         </A>
-        notion
+        깃허브
       </LinkBtn>
       <LinkBtn>
-        <A
-          href="https://docs.google.com/document/d/1TxJczs3y0zcroO8gET0XCwGdNpfOIgVuUn_sYKTvLnk/edit#heading=h.wud1wiwbg3o"
-          target="_blank"
-        >
+        <A href={notion} target="_blank">
           <CgFileDocument />
         </A>
-        resume
+        작업기록
       </LinkBtn>
     </Container>
   );
 }
 
-export default ContactLinks;
+export default DetailLinks;
 
 const Container = styled.div`
   display: flex;

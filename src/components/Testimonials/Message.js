@@ -24,7 +24,7 @@ const MsgContainer = styled.div`
   width: 50%;
   padding: 1.5rem;
   margin-bottom: 1rem;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.6);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
   color: #000000;
 

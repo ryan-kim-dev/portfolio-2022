@@ -30,6 +30,7 @@ export const Header = styled.header`
   justify-content: center;
   align-items: center;
   column-gap: 2rem;
+
   @media all and (max-width: 479px) {
     width: 100%;
     flex-direction: column;
@@ -39,8 +40,8 @@ export const Header = styled.header`
 
 export const Cover = styled.div`
   width: max-content;
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
   color: #000000;
   padding: 1rem;
   @media all and (max-width: 479px) {
@@ -67,7 +68,9 @@ export const ProfileImgBox = styled.div`
 
 export const Greeting = styled.div`
   width: max-content;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.6);
+
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
   padding: 2rem;
