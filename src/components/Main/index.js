@@ -15,8 +15,8 @@ function Main() {
       </S.SceneWrapper>
 
       <S.TextSection>
-        <S.Text className="reverse">HI, I'M</S.Text>
-        <S.Text className="reverse">RYAN KIM.</S.Text>
+        <S.Text className="text">HI, I'M</S.Text>
+        <S.Text className="text">RYAN KIM.</S.Text>
       </S.TextSection>
     </S.HomeContainer>
   );

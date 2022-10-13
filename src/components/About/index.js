@@ -34,9 +34,9 @@ function About() {
             </S.Intro>
           </S.Greeting>
         </S.Header>
-        <S.Title>{titles[0]}</S.Title>
+        <S.Title className="reverse">{titles[0]}</S.Title>
         <Tab />
-        <S.Title>{titles[1]}</S.Title>
+        <S.Title className="reverse">{titles[1]}</S.Title>
         <S.LowerArea>
           <Career />
         </S.LowerArea>

@@ -24,10 +24,17 @@ body {
     color: #e5e5e5;
   }
 
-  #light .reverse {
+  #light .text {
     color: #414141;
   }
 
+  #light .reverse {
+    color: #000000;
+  }
+
+  #dark .reverse {
+    color: #e5e5e5;
+  }
 }
 `;
 

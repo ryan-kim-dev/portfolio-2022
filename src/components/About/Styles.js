@@ -5,7 +5,6 @@ export const AboutContainer = styled(Container)`
   z-index: 1;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(40px);
-  color: black;
   width: 70%;
   row-gap: 3rem;
   display: flex;
