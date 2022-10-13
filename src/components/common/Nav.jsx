@@ -4,7 +4,7 @@ import styled from 'styled-components';
 function Nav({ scrollToSection, home, about, works, testimonials, contact }) {
   return (
     <NavContainer>
-      <NavLists className="nav">
+      <NavLists className="reverse">
         <NavItem onClick={() => scrollToSection(home)}>Home</NavItem>
         <NavItem onClick={() => scrollToSection(about)}>About</NavItem>
         <NavItem onClick={() => scrollToSection(works)}>Works</NavItem>

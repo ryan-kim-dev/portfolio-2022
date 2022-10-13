@@ -3,7 +3,7 @@ import styled from 'styled-components';
 function SectionTitle({ title }) {
   return (
     <SectionTitleWrapper>
-      <SectionTitleText>{title}</SectionTitleText>
+      <SectionTitleText className="reverse">{title}</SectionTitleText>
     </SectionTitleWrapper>
   );
 }

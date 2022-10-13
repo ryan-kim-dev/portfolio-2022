@@ -14,13 +14,20 @@ body {
   display:flex;
   flex-direction: column;
   overflow-x: hidden;
-  background-color: #202020;
-  color: #e5e5e5;
 
-  /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
-  @media all and (max-width: 479px) {
-   
+  #light {
+    background-color: #ededed;
+    color: #414141;
   }
+  #dark {
+    background-color: #202020;
+    color: #e5e5e5;
+  }
+
+  #light .reverse {
+    color: #414141;
+  }
+
 }
 `;
 
