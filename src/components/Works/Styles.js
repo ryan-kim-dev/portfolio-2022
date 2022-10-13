@@ -8,7 +8,7 @@ export const WorksContainer = styled(Container)`
   width: 70%;
   display: flex;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(40px);
   padding: 0;
 

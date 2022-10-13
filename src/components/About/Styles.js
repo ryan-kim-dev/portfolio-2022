@@ -3,7 +3,7 @@ import { Container } from '../../GlobalStyle';
 
 export const AboutContainer = styled(Container)`
   z-index: 1;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(40px);
   width: 70%;
   row-gap: 3rem;

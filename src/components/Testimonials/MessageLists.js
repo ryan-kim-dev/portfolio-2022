@@ -48,7 +48,7 @@ const ListContainer = styled(Container)``;
 
 const ListWrapper = styled.div`
   z-index: 1;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(40px);
   padding: 3em;
   display: flex;
