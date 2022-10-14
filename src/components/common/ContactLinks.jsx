@@ -31,7 +31,7 @@ function ContactLinks() {
       </LinkBtn>
       <LinkBtn>
         <A
-          href="https://docs.google.com/document/d/1TxJczs3y0zcroO8gET0XCwGdNpfOIgVuUn_sYKTvLnk/edit#heading=h.wud1wiwbg3o"
+          href="https://handsome-parcel-51e.notion.site/_-ca4eb3c74384442bbcc39c71fe7acc85"
           target="_blank"
         >
           <CgFileDocument />
