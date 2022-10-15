@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import * as S from './Styles';
 import { db } from '../../firebase';
 import { collection, getDocs } from 'firebase/firestore';
-import { Container } from '../../GlobalStyle';
+
 import Message from './Message';
 // import SectionTitle from '../common/SectionTitle';
 import Auth from './Auth';
-function MessageLists() {
+function Testimonials() {
   const [messages, setMessages] = useState([]);
   // const [index, setIndex] = useState(0);
 
@@ -21,9 +21,8 @@ function MessageLists() {
   }, []);
 
   return (
-    <ListContainer>
-      {/* <SectionTitle title={'Testimonials'} /> */}
-      <ListWrapper className="text-dark">
+    <S.ListContainer>
+      <S.ListWrapper className="text-dark">
         {messages.map((message, idx) => {
           return (
             <Message
@@ -37,22 +36,9 @@ function MessageLists() {
           );
         })}
         <Auth />
-      </ListWrapper>
-    </ListContainer>
+      </S.ListWrapper>
+    </S.ListContainer>
   );
 }
 
-export default MessageLists;
-
-const ListContainer = styled(Container)``;
-
-const ListWrapper = styled.div`
-  z-index: 1;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(40px);
-  padding: 3em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
+export default Testimonials;
