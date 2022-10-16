@@ -24,18 +24,17 @@ export const AboutSection = styled.div`
   margin: 30px 0;
 `;
 
-// export const Header = styled.header`
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   column-gap: 2rem;
+export const Header = styled.header`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
 
-//   @media all and (max-width: 479px) {
-//     width: 100%;
-//     flex-direction: column;
-//     column-gap: 0;
-//   }
-// `;
+  @media all and (max-width: 479px) {
+  }
+`;
 
 export const Cover = styled.div`
   width: 40%;
@@ -67,8 +66,7 @@ export const ProfileImgBox = styled.div`
 
 export const Greeting = styled.div`
   width: 100%;
-  background: rgba(255, 255, 255, 0.6);
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+
   display: flex;
   justify-content: center;
   align-items: center;

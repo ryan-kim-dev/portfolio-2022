@@ -1,10 +1,10 @@
 import React from 'react';
 import About from '../components/About';
 
-function AboutPage() {
+function AboutPage({ scrollToSection, testimonials }) {
   return (
     <>
-      <About />
+      <About scrollToSection={scrollToSection} testimonials={testimonials} />
     </>
   );
 }

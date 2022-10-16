@@ -56,7 +56,10 @@ const App = () => {
         </Layout>
         <Layout about ref={about} max>
           <SectionTitle title="about me" />
-          <AboutPage />
+          <AboutPage
+            scrollToSection={scrollToSection}
+            testimonials={testimonials}
+          />
         </Layout>
 
         <Layout ref={works} max>
