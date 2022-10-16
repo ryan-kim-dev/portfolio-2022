@@ -77,6 +77,7 @@ export const Greeting = styled.div`
 
   /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
   @media all and (max-width: 479px) {
+    flex-direction: column;
     width: 100%;
     padding: 30px;
     margin-top: 30px;
@@ -99,6 +100,7 @@ export const Intro = styled.div`
   /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
   @media all and (max-width: 479px) {
     font-size: 13px;
+    width: 100%;
   }
 `;
 
