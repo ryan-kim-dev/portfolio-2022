@@ -38,11 +38,11 @@ export const Header = styled.header`
 `;
 
 export const Cover = styled.div`
-  width: max-content;
-  background: rgba(255, 255, 255, 0.6);
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+  width: 40%;
+  /* background: rgba(255, 255, 255, 0.6);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4); */
   color: #000000;
-  padding: 1rem;
+  /* padding: 1rem; */
   @media all and (max-width: 479px) {
     width: 70%;
   }
@@ -66,50 +66,36 @@ export const ProfileImgBox = styled.div`
 `;
 
 export const Greeting = styled.div`
-  width: max-content;
+  width: 100%;
   background: rgba(255, 255, 255, 0.6);
-
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 2rem;
   color: #000000;
+
   /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
   @media all and (max-width: 479px) {
     width: 100%;
     padding: 30px;
     margin-top: 30px;
   }
-  .text-1 {
-    font-weight: bold;
-    font-size: 3em;
-    /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
-    @media all and (max-width: 479px) {
-      font-size: 1.5rem;
-    }
-  }
-  .text-2 {
-    font-weight: bold;
-    font-size: 2em;
-    /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
-    @media all and (max-width: 479px) {
-      font-size: 12px;
-    }
-  }
-  .text-3 {
-    font-size: 1.5em;
-    color: #374999;
-    font-weight: 500;
-    /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
-    @media all and (max-width: 479px) {
-      font-size: 13px;
-    }
-  }
 `;
 
 export const Intro = styled.div`
-  font-size: 1.2rem;
-  font-weight: 500;
+  width: 60%;
+  padding: 10px;
+  margin-left: 10px;
+
+  hr {
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
   /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
   @media all and (max-width: 479px) {
     font-size: 13px;
