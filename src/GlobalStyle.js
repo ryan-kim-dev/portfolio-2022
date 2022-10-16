@@ -83,7 +83,7 @@ export const ModalContainer = styled.div`
 export const ModalBackdrop = styled.div`
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;

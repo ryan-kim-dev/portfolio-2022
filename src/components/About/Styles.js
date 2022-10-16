@@ -24,18 +24,18 @@ export const AboutSection = styled.div`
   margin: 30px 0;
 `;
 
-export const Header = styled.header`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 2rem;
+// export const Header = styled.header`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   column-gap: 2rem;
 
-  @media all and (max-width: 479px) {
-    width: 100%;
-    flex-direction: column;
-    column-gap: 0;
-  }
-`;
+//   @media all and (max-width: 479px) {
+//     width: 100%;
+//     flex-direction: column;
+//     column-gap: 0;
+//   }
+// `;
 
 export const Cover = styled.div`
   width: 40%;
@@ -88,6 +88,7 @@ export const Intro = styled.div`
   width: 60%;
   padding: 10px;
   margin-left: 10px;
+  color: black;
 
   hr {
     margin-bottom: 10px;
