@@ -26,6 +26,11 @@ function About({ scrollToSection, testimonials }) {
                   alt="profile"
                 />
               </S.ProfileImgBox>
+              <S.IntroHeader>
+                <h2>Hyeonho Kim</h2>
+                <span className="role">Frontend Engineer</span>
+                <span className="mail">ryankim.h.dev@gmail.com</span>
+              </S.IntroHeader>
               <ContactLinks />
             </S.Cover>
             <S.Intro>

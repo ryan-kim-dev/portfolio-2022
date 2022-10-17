@@ -89,7 +89,7 @@ export const Intro = styled.div`
   color: black;
 
   hr {
-    margin-bottom: 10px;
+    margin: 10px 0;
   }
 
   p {
@@ -100,6 +100,31 @@ export const Intro = styled.div`
   @media all and (max-width: 479px) {
     font-size: 13px;
     width: 100%;
+  }
+`;
+
+export const IntroHeader = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .role {
+    color: #374999;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .mail {
+    color: gray;
+    font-size: 13px;
+    margin: 5px 0;
   }
 `;
 
