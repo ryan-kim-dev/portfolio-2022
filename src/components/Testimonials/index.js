@@ -22,21 +22,19 @@ function Testimonials() {
 
   return (
     <S.ListContainer>
-      <S.ListWrapper className="text-dark">
-        {messages.map((message, idx) => {
-          return (
-            <Message
-              idx={idx}
-              key={message.id}
-              username={message.username}
-              relation={message.relation}
-              bodyText={message.bodyText}
-              photoURL={message.photoURL}
-            />
-          );
-        })}
-        <Auth />
-      </S.ListWrapper>
+      {messages.map((message, idx) => {
+        return (
+          <Message
+            idx={idx}
+            key={message.id}
+            username={message.username}
+            relation={message.relation}
+            bodyText={message.bodyText}
+            photoURL={message.photoURL}
+          />
+        );
+      })}
+      <Auth />
     </S.ListContainer>
   );
 }

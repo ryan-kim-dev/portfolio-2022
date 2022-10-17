@@ -24,11 +24,10 @@ const MsgContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
   padding: 1.5rem;
   margin-bottom: 1rem;
   background: rgba(255, 255, 255, 0.6);
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
   color: #000000;
 
   @media screen and (max-width: 479px) {
@@ -47,7 +46,7 @@ const Left = styled.div`
     border-radius: 50%;
   }
   h2 {
-    font-size: 16px;
+    font-size: 1.3rem;
   }
   span {
     font-size: 0.8rem;
@@ -59,8 +58,11 @@ const Left = styled.div`
 
 const Right = styled.div`
   /* width: 80%; */
-  font-size: 13px;
   padding: 10px;
+
+  p {
+    font-size: 1.1rem;
+  }
 
   @media screen and (max-width: 479px) {
     padding: 5px;
