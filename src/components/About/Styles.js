@@ -3,8 +3,8 @@ import { Container } from '../../GlobalStyle';
 
 export const AboutContainer = styled(Container)`
   z-index: 1;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(40px);
+  /* background: rgba(255, 255, 255, 0.1);
+   */
   width: 70%;
   row-gap: 3rem;
   display: flex;
@@ -31,6 +31,7 @@ export const Header = styled.header`
   align-items: center;
   background: rgba(255, 255, 255, 0.6);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(40px);
 
   @media all and (max-width: 479px) {
   }
@@ -38,6 +39,7 @@ export const Header = styled.header`
 
 export const Cover = styled.div`
   width: 40%;
+
   /* background: rgba(255, 255, 255, 0.6);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4); */
   color: #000000;
@@ -66,16 +68,16 @@ export const ProfileImgBox = styled.div`
 
 export const Greeting = styled.div`
   width: 100%;
-
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 2rem;
+  /* align-items: center; */
+  padding: 2rem 0;
   color: #000000;
 
   /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
   @media all and (max-width: 479px) {
     flex-direction: column;
+    align-items: center;
     width: 100%;
     padding: 30px;
     margin-top: 30px;
@@ -83,9 +85,10 @@ export const Greeting = styled.div`
 `;
 
 export const Intro = styled.div`
-  width: 60%;
-  padding: 10px;
-  margin-left: 10px;
+  width: 50%;
+  height: 100%;
+  padding: 1rem;
+  /* margin-left: 10px; */
   color: black;
 
   hr {
@@ -93,13 +96,18 @@ export const Intro = styled.div`
   }
 
   p {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
   @media all and (max-width: 479px) {
     font-size: 13px;
     width: 100%;
+    margin-top: 30px;
+
+    p {
+      font-size: 1rem;
+    }
   }
 `;
 
@@ -113,17 +121,18 @@ export const IntroHeader = styled.div`
   h2 {
     margin: 0;
     padding: 0;
+    font-size: 2rem;
   }
 
   .role {
     color: #374999;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 1.3rem;
   }
 
   .mail {
     color: gray;
-    font-size: 13px;
+    font-size: 1.1rem;
     margin: 5px 0;
   }
 `;
@@ -158,7 +167,7 @@ export const Career = styled.article`
   height: auto;
   flex-direction: row;
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
-  /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
+
   @media all and (max-width: 479px) {
     border-radius: 7px;
   }

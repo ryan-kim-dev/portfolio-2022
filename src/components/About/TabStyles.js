@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 export const TabLayout = styled.div`
   width: 800px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(40px);
+
   @media screen and (max-width: 479px) {
     width: 380px;
   }

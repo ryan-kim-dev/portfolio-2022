@@ -62,6 +62,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: max-content;
+  max-width: 1330px;
 
   color: black;
   padding: 0 160px;
