@@ -62,6 +62,7 @@ const LinkBtn = styled.div`
   svg {
     width: 20px;
     height: 20px;
+    /* transition: 0.25s; */
   }
 `;
 
@@ -72,4 +73,10 @@ const A = styled.a`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: 0.25s;
+
+  :hover {
+    color: #374999;
+    scale: 2;
+  }
 `;

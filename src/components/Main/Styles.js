@@ -55,6 +55,7 @@ export const TextSection = styled.div`
   font-family: 'Oswald', sans-serif;
   top: -10px;
   left: 50px;
+
   /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
   @media all and (min-width: 480px) and (max-width: 767px) {
     top: 50px;
@@ -70,6 +71,7 @@ export const TextSection = styled.div`
 `;
 
 export const Text = styled(motion.p)`
+  cursor: grab;
   display: flex;
   flex-direction: column;
   max-width: 500px;
