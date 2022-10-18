@@ -83,8 +83,8 @@ export const Text = styled(motion.span)`
   /* animation-delay: 0.1s; */
   @keyframes animate {
     0% {
-      color: #fff;
-      filter: blur(2px) hue-rotate(0deg);
+      /* color: #fff; */
+      filter: hue-rotate(0deg);
       text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
         0 0 80px #00b3ff, 0 0 120px #00b3ff, 0 0 200px #00b3ff,
         0 0 300px #00b3ff;
@@ -92,8 +92,8 @@ export const Text = styled(motion.span)`
 
     30%,
     70% {
-      color: #fff;
-      filter: blur(2px) hue-rotate(360deg);
+      /* color: #fff; */
+      filter: hue-rotate(360deg);
       text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
         0 0 80px #00b3ff, 0 0 120px #00b3ff, 0 0 200px #00b3ff,
         0 0 300px #00b3ff;
@@ -101,7 +101,7 @@ export const Text = styled(motion.span)`
     100% {
       color: transparent;
       box-shadow: none;
-      filter: blur(2px) hue-rotate(0deg);
+      filter: hue-rotate(0deg);
     }
   }
 
