@@ -15,12 +15,22 @@ function Main() {
       </S.SceneWrapper>
 
       <S.TextSection>
-        <S.Text className="text" drag whileHover={{ scale: 1.1 }}>
-          HI, I'M
-        </S.Text>
-        <S.Text className="text" drag whileHover={{ scale: 1.1 }}>
-          RYAN KIM.
-        </S.Text>
+        <S.Text className="reverse">H</S.Text>
+        <S.Text className="reverse">I</S.Text>
+        <S.Text className="reverse">,</S.Text>
+        <S.Text className="reverse"> </S.Text>
+        <S.Text className="reverse">I</S.Text>
+        <S.Text className="reverse">'</S.Text>
+        <S.Text className="reverse">M</S.Text>
+        <br />
+        <S.Text className="reverse">R</S.Text>
+        <S.Text className="reverse">Y</S.Text>
+        <S.Text className="reverse">A</S.Text>
+        <S.Text className="reverse">N</S.Text>
+        <br />
+        <S.Text className="reverse">K</S.Text>
+        <S.Text className="reverse">I</S.Text>
+        <S.Text className="reverse">M</S.Text>
       </S.TextSection>
     </S.HomeContainer>
   );

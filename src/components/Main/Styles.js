@@ -70,15 +70,41 @@ export const TextSection = styled.div`
   }
 `;
 
-export const Text = styled(motion.p)`
+export const Text = styled(motion.span)`
   cursor: grab;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   max-width: 500px;
   flex-wrap: wrap;
   font-weight: 500;
-  color: #ededed;
-  /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
+
+  /* text animation */
+  animation: animate 3s linear infinite;
+  /* animation-delay: 0.1s; */
+  @keyframes animate {
+    0% {
+      color: #fff;
+      filter: blur(2px) hue-rotate(0deg);
+      text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+        0 0 80px #00b3ff, 0 0 120px #00b3ff, 0 0 200px #00b3ff,
+        0 0 300px #00b3ff;
+    }
+
+    30%,
+    70% {
+      color: #fff;
+      filter: blur(2px) hue-rotate(360deg);
+      text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+        0 0 80px #00b3ff, 0 0 120px #00b3ff, 0 0 200px #00b3ff,
+        0 0 300px #00b3ff;
+    }
+    100% {
+      color: transparent;
+      box-shadow: none;
+      filter: blur(2px) hue-rotate(0deg);
+    }
+  }
+
   @media all and (max-width: 479px) {
     font-size: 50px;
   }
