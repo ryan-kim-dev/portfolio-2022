@@ -26,7 +26,6 @@ const NavContainer = styled.nav`
   right: 0;
   font-family: 'Oswald', sans-serif;
   text-decoration: none;
-  color: #e5e5e5;
 
   @media all and (max-width: 479px) {
   }
