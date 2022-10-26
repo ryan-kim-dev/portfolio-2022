@@ -1,10 +1,5 @@
 import styled from 'styled-components';
-import {
-  ModalContainer,
-  ModalBackdrop,
-  ModalBtn,
-  ModalView,
-} from '../../GlobalStyle';
+import { ModalContainer, ModalBackdrop, ModalView } from '../../GlobalStyle';
 
 export const ReviewLayout = styled(ModalContainer)``;
 
