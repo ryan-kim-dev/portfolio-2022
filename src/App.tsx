@@ -17,14 +17,14 @@ const ScrollToTop = React.lazy(() => import('./components/common/ScrollToTop'));
 const ToggleTheme = React.lazy(() => import('./components/common/ToggleTheme'));
 const Loading = React.lazy(() => import('./components/common/Loading'));
 
-const App = () => {
+function App() {
   const home = useRef(null);
   const about = useRef(null);
   const works = useRef(null);
   const testimonials = useRef(null);
   const contact = useRef(null);
 
-  const [theme, setTheme] = useState(`${localStorage.theme}`);
+  const [theme, setTheme] = useState<string>(`${localStorage.theme}`);
 
   const switchTheme = () => {
     return setTheme(localStorage.theme);
@@ -77,6 +77,6 @@ const App = () => {
       </div>
     </Suspense>
   );
-};
+}
 
 export default App;

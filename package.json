@@ -12,11 +12,6 @@
     "@fortawesome/free-regular-svg-icons": "^6.1.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@splinetool/react-spline": "^2.2.1",
-    "@types/jest": "^29.2.0",
-    "@types/node": "^18.11.7",
-    "@types/react": "^18.0.23",
-    "@types/react-dom": "^18.0.7",
-    "@types/react-router-dom": "^5.3.3",
     "axios": "^0.27.2",
     "compress-create-react-app": "^1.2.1",
     "firebase": "^9.9.1",
@@ -32,8 +27,7 @@
     "react-scripts": "5.0.1",
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.1",
-    "styled-components": "^5.3.5",
-    "typescript": "^4.8.4"
+    "styled-components": "^5.3.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -64,6 +58,12 @@
     "cra-bundle-analyzer": "^0.1.1",
     "prop-types": "^15.8.1",
     "redux-logger": "^3.0.6",
-    "webpack": "^5.73.0"
+    "webpack": "^5.73.0",
+    "@types/jest": "^29.2.0",
+    "@types/node": "^18.11.7",
+    "@types/react": "^18.0.23",
+    "@types/react-dom": "^18.0.7",
+    "@types/react-router-dom": "^5.3.3",
+    "typescript": "^4.8.4"
   }
 }
