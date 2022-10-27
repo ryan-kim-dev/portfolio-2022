@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import * as S from './TabStyles';
 
 function Tab() {
-  const [currentTab, setCurrentTab] = useState(0);
+  const [currentTab, setCurrentTab] = useState<number>(0);
 
   const menuArr = [
     {
@@ -45,7 +45,7 @@ function Tab() {
     },
   ];
 
-  const selectMenuHandler = index => {
+  const selectMenuHandler = (index: number) => {
     setCurrentTab(index);
   };
   return (
