@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Spline from '@splinetool/react-spline';
 import { motion } from 'framer-motion';
 
@@ -77,10 +77,16 @@ export const Text = styled(motion.span)`
   max-width: 500px;
   flex-wrap: wrap;
   font-weight: 500;
-
+  ${({ time }) => {
+    return (
+      time &&
+      css`
+        animation: animate 3s linear infinite;
+        animation-delay: ${time}s;
+      `
+    );
+  }}
   /* text animation */
-  animation: animate 3s linear infinite;
-  /* animation-delay: 0.1s; */
   @keyframes animate {
     0% {
       /* color: #fff; */

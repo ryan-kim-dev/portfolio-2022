@@ -2,8 +2,12 @@ export const personal = [
   {
     id: 1,
     title: `My Portfolio`,
-    description: `리액트로 제작한 개인 포트폴리오 웹 사이트 입니다.`,
-    role: `개인 작업물입니다.`,
+    description: `리액트로 제작한 개인 포트폴리오 웹사이트입니다. 
+
+    깃허브 소셜 로그인을 통한 동적인 추천사 CRUD를 firebase를 통해 구현하였습니다.`,
+    role: `CRA 프로젝트로 생성하여 Heroku를 사용하여 정적웹으로 배포하였습니다.
+    Firebase의 Cloud Firestore 데이터베이스를 사용하여 깃허브 소셜 로그인을 통한 추천사의 CRUD를 구현하였습니다.
+    3d 모델링 툴인 Spine에서 제작한 3d 모델링 파일을 코드로 변환하여 React-Spline 라이브러리를 통해 받아와 화면에서 인터렉션을 보여줄 수 있도록 사용하였습니다.`,
     coverURL: 'https://i.imgur.com/WwQFDbz.png',
     deployURL: 'https://ryan-kim-portfolio.herokuapp.com/',
     youtubeURL: '',
