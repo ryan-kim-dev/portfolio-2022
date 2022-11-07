@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import * as S from './TabStyles';
 
 function Tab() {
-  const [currentTab, setCurrentTab] = useState<number>(0);
-
   const menuArr = [
     {
       name: 'React',
@@ -45,31 +43,21 @@ function Tab() {
     },
   ];
 
-  const selectMenuHandler = (index: number) => {
-    setCurrentTab(index);
-  };
   return (
     <S.TabLayout>
-      <S.TabMenu>
-        {menuArr.map((el, i) => (
-          <li
-            onClick={() => selectMenuHandler(i)}
-            key={i}
-            className={`${i === currentTab ? 'submenu focused' : 'submenu'}`}
-          >
-            {el.name}
-          </li>
-        ))}
-      </S.TabMenu>
-      <S.Desc className="text-dark">
-        <S.Left>
-          <img src={menuArr[currentTab].imgUrl} alt="stack" />
-          <div>{menuArr[currentTab].name}</div>
-        </S.Left>
-        <S.Right>
-          <p>{menuArr[currentTab].description}</p>
-        </S.Right>
-      </S.Desc>
+      {menuArr.map(el => {
+        return (
+          <S.Desc>
+            <S.Left>
+              <img src={el.imgUrl} alt="stack" />
+              <div>{el.name}</div>
+            </S.Left>
+            <S.Right>
+              <p>{el.description}</p>
+            </S.Right>
+          </S.Desc>
+        );
+      })}
     </S.TabLayout>
   );
 }

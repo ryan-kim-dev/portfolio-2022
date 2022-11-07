@@ -40,7 +40,6 @@ export const Desc = styled.div`
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
   border-radius: 7px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1rem;
