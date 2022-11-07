@@ -21,6 +21,7 @@ export const WorksContainer = styled(Container)`
 export const SubTitle = styled.h2`
   color: #e5e5e5;
   margin-bottom: 30px;
+  font-family: 'Oswald', sans-serif;
 `;
 
 export const ProjectSection = styled.section`

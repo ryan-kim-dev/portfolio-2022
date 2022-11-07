@@ -6,7 +6,7 @@ import Career from './Career';
 import Reference from './Reference';
 
 function About({ scrollToSection, testimonials }) {
-  const titles = ['ARCHIVE', 'SKILLS', 'PATH', 'PROJECTS'];
+  const titles = ['ARCHIVE', 'SKILLS', 'EDUCATION'];
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpenModal = () => {
@@ -40,15 +40,12 @@ function About({ scrollToSection, testimonials }) {
                 다양한 사람들과의 협업 경험을 통해 개인과 팀 모두의 성장을
                 꿈꿉니다.
                 <br />
-                <br />
                 부트캠프 기간 중 2개 스터디에 조원으로 참여, 1개 스터디를
                 운영하였고 6주간 2번의 협업 프로젝트에 팀장으로 참여하였습니다.
                 <br />
-                <br />
-                AWS 인프라 구축, https 통신 연결, SNS 기능 구현 등 작업 진행에
+                AWS 인프라 구축, https 통신 연결, SNS 기능 구현 등 작업 진행 중
                 병목이 생길 수 있는 부분들에서 먼저 나서서 학습하고 공유하며 팀
                 프로젝트를 진행하였습니다.
-                <br />
                 <br />
                 꾸준한 노력의 힘을 믿습니다.
                 <br />

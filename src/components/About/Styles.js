@@ -41,7 +41,6 @@ export const Header = styled.header`
 
 export const Cover = styled.div`
   width: 40%;
-
   /* background: rgba(255, 255, 255, 0.6);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4); */
   color: #000000;
@@ -90,8 +89,11 @@ export const Intro = styled.div`
   width: 50%;
   height: 100%;
   padding: 1rem;
-  /* margin-left: 10px; */
   color: black;
+
+  h2 {
+    font-family: 'Oswald', sans-serif;
+  }
 
   hr {
     margin: 10px 0;
@@ -119,6 +121,7 @@ export const IntroHeader = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: 'Oswald', sans-serif;
 
   h2 {
     margin: 0;
@@ -147,42 +150,31 @@ export const Title = styled.h2`
   padding: 30px;
 `;
 
-export const LowerArea = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
-  @media all and (max-width: 479px) {
-  }
-`;
-
 // * Career: 별도 컴포넌트/ 커리어 패스 개별 항목 스타일링
 export const Career = styled.article`
   z-index: 1;
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(40px);
   display: flex;
-  width: 80%;
+  /* width: 80%; */
   height: auto;
   flex-direction: row;
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
 
   @media all and (max-width: 479px) {
-    border-radius: 7px;
+    flex-direction: column;
   }
 `;
 
 export const CareerLeft = styled.div`
-  width: 150px;
-  height: 100px;
+  width: 30%;
+  padding: 10px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   img {
-    width: 100%;
+    width: 50%;
     padding: 30px 0 30px 30px;
     @media all and (max-width: 479px) {
       padding: 0;
@@ -192,20 +184,28 @@ export const CareerLeft = styled.div`
   }
   /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
   @media all and (max-width: 479px) {
+    width: 100%;
   }
 `;
 
 export const CareerRight = styled.div`
-  font-size: 13px;
+  padding: 25px 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 100%;
+  align-items: flex-start;
+  width: 70%;
+  row-gap: 10px;
+
+  p {
+    font-size: 14px;
+  }
+
   /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
   @media all and (max-width: 479px) {
     text-align: center;
     padding: 10px;
+    width: 100%;
   }
 `;
 
@@ -219,13 +219,13 @@ export const Span = styled.span`
   }
   &.date {
     color: gray;
+    font-size: 10px;
     @media all and (max-width: 479px) {
-      font-size: 10px;
     }
   }
   &.description {
+    font-size: 13px;
   }
   @media all and (max-width: 479px) {
-    font-size: 11px;
   }
 `;

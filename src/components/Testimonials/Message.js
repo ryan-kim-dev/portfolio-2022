@@ -57,7 +57,6 @@ const Left = styled.div`
 `;
 
 const Right = styled.div`
-  /* width: 80%; */
   padding: 10px;
 
   p {
