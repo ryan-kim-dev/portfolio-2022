@@ -142,12 +142,25 @@ export const IntroHeader = styled.div`
   }
 `;
 
+export const Section = styled.section`
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(40px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  padding: 30px;
+`;
+
 export const Title = styled.h2`
   font-family: 'Oswald', sans-serif;
   display: flex;
   width: 100%;
   justify-content: center;
   padding: 30px;
+  color: #000000;
 `;
 
 // * Career: 별도 컴포넌트/ 커리어 패스 개별 항목 스타일링

@@ -7,7 +7,7 @@ function Works() {
   return (
     <S.WorksContainer>
       <S.ProjectSection>
-        <S.SubTitle className="reverse">PERSONAL PROJECTS</S.SubTitle>
+        <S.SubTitle>PERSONAL PROJECTS</S.SubTitle>
         {personal.map(project => {
           return (
             <Project
@@ -25,7 +25,7 @@ function Works() {
         })}
       </S.ProjectSection>
       <S.ProjectSection>
-        <S.SubTitle className="reverse">TEAM PROJECTS</S.SubTitle>
+        <S.SubTitle>TEAM PROJECTS</S.SubTitle>
         {team.map(project => {
           return (
             <Project

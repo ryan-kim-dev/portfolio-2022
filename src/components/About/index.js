@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import * as S from './Styles';
 import ContactLinks from '../common/ContactLinks';
+import Archive from './Archive';
 import Tab from './Tab';
 import Career from './Career';
 import Reference from './Reference';
@@ -62,11 +63,18 @@ function About({ scrollToSection, testimonials }) {
             testimonials={testimonials}
           />
         </S.Header>
-        <S.Title className="reverse">{titles[0]}</S.Title>
-        <S.Title className="reverse">{titles[1]}</S.Title>
-        <Tab />
-        <S.Title className="reverse">{titles[2]}</S.Title>
-        <Career />
+        <S.Section>
+          <S.Title>{titles[0]}</S.Title>
+          <Archive />
+        </S.Section>
+        <S.Section>
+          <S.Title>{titles[1]}</S.Title>
+          <Tab />
+        </S.Section>
+        <S.Section>
+          <S.Title>{titles[2]}</S.Title>
+          <Career />
+        </S.Section>
       </S.AboutSection>
     </S.AboutContainer>
   );
