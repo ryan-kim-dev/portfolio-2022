@@ -24,7 +24,7 @@ function App() {
   const testimonials = useRef(null);
   const contact = useRef(null);
 
-  const [theme, setTheme] = useState<string>(`${localStorage.theme}`);
+  const [theme, setTheme] = useState(`${localStorage.theme}`);
 
   const switchTheme = () => {
     return setTheme(localStorage.theme);

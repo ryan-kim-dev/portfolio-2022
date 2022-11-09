@@ -6,6 +6,11 @@ const GlobalStyle = createGlobalStyle`
      margin: 0;
      padding: 0px;
      box-sizing: border-box;
+
+     a {
+      text-decoration: none;
+      color: #000000;
+     }
  }
 body {
   /* width: 100vw;
@@ -40,7 +45,13 @@ body {
 
 export default GlobalStyle;
 
-export const Layout = styled.main`
+interface LayoutProps {
+  about: boolean;
+  max: string;
+  children: never | any;
+}
+
+export const Layout = styled.main<LayoutProps>`
   width: 100%;
   height: ${({ max }) => (max ? 'max-content' : '100vh')};
   display: flex;
