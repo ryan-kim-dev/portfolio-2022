@@ -54,7 +54,7 @@ function App() {
         <Layout ref={home}>
           <MainPage />
         </Layout>
-        <Layout about ref={about} max>
+        <Layout about="true" ref={about} max="true">
           <SectionTitle title="about me" />
           <AboutPage
             scrollToSection={scrollToSection}
@@ -62,7 +62,7 @@ function App() {
           />
         </Layout>
 
-        <Layout ref={works} max>
+        <Layout ref={works} max="true">
           <SectionTitle title="works" />
           <WorksPage />
         </Layout>

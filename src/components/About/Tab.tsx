@@ -47,7 +47,7 @@ function Tab() {
     <S.TabLayout>
       {menuArr.map(el => {
         return (
-          <S.Desc>
+          <S.Desc key={Math.random()}>
             <S.Left>
               <img src={el.imgUrl} alt="stack" />
               <div>{el.name}</div>

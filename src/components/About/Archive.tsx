@@ -7,7 +7,12 @@ function Archive() {
     <S.Wrapper>
       {archives.map(el => {
         return (
-          <a href={el.link} target="_blank" rel="noreferrer">
+          <a
+            key={Math.random()}
+            href={el.link}
+            target="_blank"
+            rel="noreferrer"
+          >
             <S.IconBox key={el.id}>
               <S.IconLogoBox>
                 <S.IconImg src={el.logo} alt="" />

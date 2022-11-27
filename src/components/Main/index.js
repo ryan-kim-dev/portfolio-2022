@@ -33,7 +33,11 @@ function Main() {
       if (item === '\n') result.push($br);
       else
         result.push(
-          <S.Text className="reverse" time={(index + 1) / time}>
+          <S.Text
+            key={Math.random()}
+            className="reverse"
+            time={(index + 1) / time}
+          >
             {item}
           </S.Text>
         );

@@ -17,19 +17,11 @@ function Project({
       <S.ProjectArticle>
         <S.CoverWrapper>
           <S.ProjectTitle>{title}</S.ProjectTitle>
-          {youtube === '' ? (
-            <S.ProjectCover>
-              <S.CoverImg src={cover} />
-            </S.ProjectCover>
-          ) : (
-            <S.YoutubeIframe
-              src={youtube}
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            />
-          )}
+
+          <S.ProjectCover>
+            <S.CoverImg src={cover} />
+          </S.ProjectCover>
+
           <DetailLinks
             deploy={deploy}
             youtube={youtube}
