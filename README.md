@@ -1,6 +1,8 @@
 # my-portfolio-app
 - master 브랜치: v1.0 React + TS 프로젝트
 - dev 브랜치: v2.0 TS + Next 프로젝트
+  - feature/atomic: 아토믹 디자인 패턴을 적용한 파일구조 테스트용 feature 브랜치
+- heroku 브랜치: 과거 배포 주소로 접속한 사용자를 위한 리디렉트 페이지 (heroku -> vercel 로 배포 플랫폼 이동)
 
 [배포 링크](https://ryan-kim-portfolio.herokuapp.com/)
 
