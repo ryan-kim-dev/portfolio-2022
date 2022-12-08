@@ -11,10 +11,15 @@
 [작업기 보러가기](https://handsome-parcel-51e.notion.site/1-c231e8ed2c1e4a498facc655817bd159)
 
 ### 클라이언트
-
-- 라이브러리: React(CRA)
-- 상태관리: Redux
-- 스타일링: styled-components(CSS), react-spline(3d object)
+#### 라이브러리 or 프레임워크: 
+- v1.0: React(CRA)
+- v2.0: NextJS
+#### 상태관리: 
+- v1.0: redux 
+- v2.0: 미정
+#### 스타일링: 
+- v1.0: styled-components(CSS-IN-JS), react-spline(WebGL)
+- v2.0: 
 
 ### 백엔드
 
