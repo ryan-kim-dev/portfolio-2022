@@ -4,7 +4,7 @@
   - feature/atomic: 아토믹 디자인 패턴을 적용한 파일구조 테스트용 feature 브랜치
 - heroku 브랜치: 과거 배포 주소로 접속한 사용자를 위한 리디렉트 페이지 (heroku -> vercel 로 배포 플랫폼 이동)
 
-[배포 링크](https://ryan-kim-portfolio.herokuapp.com/)
+[배포 링크](https://my-portfolio-app-phi.vercel.app/)
 
 ## Stack
 
