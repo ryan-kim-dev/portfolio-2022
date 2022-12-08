@@ -1,4 +1,6 @@
 # my-portfolio-app
+- master 브랜치: v1.0 React + TS 프로젝트
+- dev 브랜치: v2.0 TS + Next 프로젝트
 
 [배포 링크](https://ryan-kim-portfolio.herokuapp.com/)
 
