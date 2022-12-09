@@ -3,6 +3,7 @@ import * as S from './Styles';
 
 function Main() {
   const MemoizeSplineObj = useMemo(() => {
+    if (window.screen.width > 400) return;
     return (
       <S.Scene scene="https://prod.spline.design/zo7-TU0uJWfVO-Ye/scene.splinecode" />
     );
@@ -48,7 +49,7 @@ function Main() {
   return (
     <S.HomeContainer id="home">
       <S.SceneWrapper>
-        {window.screen.width > 400 && MemoizeSplineObj}
+        {window.screen.width > 400 ? MemoizeSplineObj : null}
       </S.SceneWrapper>
 
       <S.TextSection>{createText(5)}</S.TextSection>
