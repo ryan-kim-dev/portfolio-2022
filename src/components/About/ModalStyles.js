@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { ModalContainer, ModalBackdrop, ModalView } from '../../GlobalStyle';
 
-export const ReviewLayout = styled(ModalContainer)``;
-
-export const ReviewBackDrop = styled(ModalBackdrop)`
+export const ReviewLayout = styled.section`
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const ReviewCloseBtn = styled.button`
@@ -14,7 +14,7 @@ export const ReviewCloseBtn = styled.button`
   font-size: 30px;
 `;
 
-export const ReviewContent = styled(ModalView)`
+export const ReviewContent = styled.article`
   display: flex;
   justify-content: center;
   align-items: center;

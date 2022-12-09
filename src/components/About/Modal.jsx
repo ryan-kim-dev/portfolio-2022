@@ -54,30 +54,28 @@ function Modal({ handleOpenModal }) {
 
   return (
     <S.ReviewLayout>
-      <S.ReviewBackDrop>
-        <S.ReviewCloseBtn className="reverse" onClick={handleOpenModal}>
-          <MdClose />
-        </S.ReviewCloseBtn>
-        <S.ReviewContent>
-          <S.ReviewChangeBtn
-            className="reverse"
-            type="button"
-            onClick={() => setPage(prev => prev - 1)}
-            disabled={page === 0}
-          >
-            <IoIosArrowDropleftCircle />
-          </S.ReviewChangeBtn>
-          <img src={reviews[page]} alt="페어리뷰 1" id="1" />
-          <S.ReviewChangeBtn
-            className="reverse"
-            type="button"
-            onClick={() => setPage(prev => prev + 1)}
-            disabled={page === reviews.length - 1}
-          >
-            <IoIosArrowDroprightCircle />
-          </S.ReviewChangeBtn>
-        </S.ReviewContent>
-      </S.ReviewBackDrop>
+      <S.ReviewCloseBtn className="reverse" onClick={handleOpenModal}>
+        <MdClose />
+      </S.ReviewCloseBtn>
+      <S.ReviewContent>
+        <S.ReviewChangeBtn
+          className="reverse"
+          type="button"
+          onClick={() => setPage(prev => prev - 1)}
+          disabled={page === 0}
+        >
+          <IoIosArrowDropleftCircle />
+        </S.ReviewChangeBtn>
+        <img src={reviews[page]} alt="페어리뷰 1" id="1" />
+        <S.ReviewChangeBtn
+          className="reverse"
+          type="button"
+          onClick={() => setPage(prev => prev + 1)}
+          disabled={page === reviews.length - 1}
+        >
+          <IoIosArrowDroprightCircle />
+        </S.ReviewChangeBtn>
+      </S.ReviewContent>
     </S.ReviewLayout>
   );
 }
