@@ -113,11 +113,7 @@ export const ModalBtn = styled.button`
   cursor: grab;
 `;
 
-export const ModalView = styled.div.attrs(props => ({
-  // attrs 메소드를 이용해서 아래와 같이 div 엘리먼트에 속성을 추가할 수 있습니다.
-  // * 모달창에서 attrs 메서드 사용하는 이유: 스크린 리더 상에서 태그 설명 등 웹 접근성
-  role: 'dialog', // dialog -> 모달창임을 나타내는 role
-}))`
+export const ModalView = styled.div`
   position: relative;
   width: max-content;
   height: max-content;
