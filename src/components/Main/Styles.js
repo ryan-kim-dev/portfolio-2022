@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import Spline from '@splinetool/react-spline';
-import { motion } from 'framer-motion';
 
 import { Container } from '../../GlobalStyle';
 
@@ -70,7 +69,7 @@ export const TextSection = styled.div`
   }
 `;
 
-export const Text = styled(motion.span)`
+export const Text = styled.span`
   cursor: grab;
   /* display: flex;
   flex-direction: column; */
