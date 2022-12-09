@@ -18,11 +18,11 @@ const ToggleTheme = React.lazy(() => import('./components/common/ToggleTheme'));
 const Loading = React.lazy(() => import('./components/common/Loading'));
 
 function App() {
-  const home = useRef(null);
-  const about = useRef(null);
-  const works = useRef(null);
-  const testimonials = useRef(null);
-  const contact = useRef(null);
+  const home = useRef() as React.MutableRefObject<HTMLDivElement>;
+  const about = useRef() as React.MutableRefObject<HTMLDivElement>;
+  const works = useRef() as React.MutableRefObject<HTMLDivElement>;
+  const testimonials = useRef() as React.MutableRefObject<HTMLDivElement>;
+  const contact = useRef() as React.MutableRefObject<HTMLDivElement>;
 
   const [theme, setTheme] = useState(`${localStorage.theme}`);
 
@@ -61,7 +61,6 @@ function App() {
             testimonials={testimonials}
           />
         </Layout>
-
         <Layout ref={works} max="true">
           <SectionTitle title="works" />
           <WorksPage />

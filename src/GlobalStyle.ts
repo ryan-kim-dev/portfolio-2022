@@ -45,11 +45,12 @@ body {
 
 export default GlobalStyle;
 
-interface LayoutProps {
-  about: boolean;
-  max: string;
-  children: never | any;
-}
+type LayoutProps = {
+  about?: string;
+  max?: string;
+  children?: React.ReactNode;
+  ref?: React.MutableRefObject<HTMLDivElement>;
+};
 
 export const Layout = styled.main<LayoutProps>`
   width: 100%;
