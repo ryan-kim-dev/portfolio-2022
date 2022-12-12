@@ -1,7 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function Nav({ scrollToSection, home, about, works, testimonials, contact }) {
+type NavProps = {
+  scrollToSection: (elementRef: {
+    current: {
+      offsetTop: number | undefined;
+    };
+  }) => void;
+  home: React.MutableRefObject<HTMLDivElement>;
+  about: React.MutableRefObject<HTMLDivElement>;
+  works: React.MutableRefObject<HTMLDivElement>;
+  testimonials: React.MutableRefObject<HTMLDivElement>;
+  contact: React.MutableRefObject<HTMLDivElement>;
+};
+
+function Nav({
+  scrollToSection,
+  home,
+  about,
+  works,
+  testimonials,
+  contact,
+}: NavProps) {
   return (
     <NavContainer>
       <NavLists className="reverse">

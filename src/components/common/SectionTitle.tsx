@@ -1,6 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-function SectionTitle({ title }) {
+
+type SectionTitleProps = {
+  title: string;
+};
+
+function SectionTitle({ title }: SectionTitleProps) {
   return (
     <SectionTitleWrapper>
       <SectionTitleText className="reverse">{title}</SectionTitleText>
