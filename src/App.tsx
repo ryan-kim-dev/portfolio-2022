@@ -8,11 +8,11 @@ import GlobalStyle, { Layout } from './GlobalStyle';
 const Nav = React.lazy(() => import('./components/common/Nav'));
 
 // pages
-const AboutPage = React.lazy(() => import('./pages/About'));
-const ContactPage = React.lazy(() => import('./pages/ContactPage'));
-const MainPage = React.lazy(() => import('./pages/Main'));
-const WorksPage = React.lazy(() => import('./pages/WorksPage'));
-const TestimonialPage = React.lazy(() => import('./pages/TestimonialPage'));
+const About = React.lazy(() => import('./pages/About'));
+const Contact = React.lazy(() => import('./pages/Contact'));
+const Main = React.lazy(() => import('./pages/Main'));
+const Works = React.lazy(() => import('./pages/Works'));
+const Testimonials = React.lazy(() => import('./pages/Testimonials'));
 const ScrollToTop = React.lazy(() => import('./components/common/ScrollToTop'));
 const ToggleTheme = React.lazy(() => import('./components/common/ToggleTheme'));
 const Loading = React.lazy(() => import('./components/common/Loading'));
@@ -52,26 +52,26 @@ function App() {
         )}
 
         <Layout ref={home}>
-          <MainPage />
+          <Main />
         </Layout>
         <Layout about="true" ref={about} max="true">
           <SectionTitle title="about me" />
-          <AboutPage
+          <About
             scrollToSection={scrollToSection}
             testimonials={testimonials}
           />
         </Layout>
         <Layout ref={works} max="true">
           <SectionTitle title="works" />
-          <WorksPage />
+          <Works />
         </Layout>
         <Layout ref={testimonials}>
           <SectionTitle title="testimonials" />
-          <TestimonialPage />
+          <Testimonials />
         </Layout>
         <Layout ref={contact}>
           <SectionTitle title="contact" />
-          <ContactPage />
+          <Contact />
         </Layout>
       </div>
     </Suspense>
