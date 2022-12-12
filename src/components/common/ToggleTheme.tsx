@@ -1,7 +1,14 @@
+import React from 'react';
 import { useState } from 'react';
 import styled from 'styled-components';
 
-function ToggleTheme({ theme, setTheme, switchTheme }) {
+type ToggleThemeProps = {
+  theme: string;
+  setTheme: React.Dispatch<React.SetStateAction<string>>;
+  switchTheme: () => void;
+};
+
+function ToggleTheme({ theme, setTheme, switchTheme }: ToggleThemeProps) {
   const [isOn, setisOn] = useState(false);
 
   const toggleHandler = () => {
