@@ -8,7 +8,7 @@ import GlobalStyle, { Layout } from './GlobalStyle';
 const Nav = React.lazy(() => import('./components/common/Nav'));
 
 // pages
-const AboutPage = React.lazy(() => import('./pages/AboutPage'));
+const AboutPage = React.lazy(() => import('./pages/About'));
 const ContactPage = React.lazy(() => import('./pages/ContactPage'));
 const MainPage = React.lazy(() => import('./pages/Main'));
 const WorksPage = React.lazy(() => import('./pages/WorksPage'));

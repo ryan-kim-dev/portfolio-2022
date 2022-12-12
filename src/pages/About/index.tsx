@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
 import * as S from './Styles';
-import ContactLinks from '../common/ContactLinks';
+import ContactLinks from '../../components/common/ContactLinks';
 import Archive from './Archive';
 import Tab from './Tab';
 import Career from './Career';
 import Reference from './Reference';
+import { scrollToSection } from '../../utils/scrollToSection';
 
-function About({ scrollToSection, testimonials }) {
+type AboutProps = {
+  scrollToSection: (elementRef: {
+    current: { offsetTop: number | undefined };
+  }) => void;
+  testimonials: unknown; // MutableRefObject<null>
+};
+
+function About({ testimonials }: AboutProps) {
   const titles = ['ARCHIVE', 'SKILLS', 'EDUCATION'];
   const [isOpen, setIsOpen] = useState(false);
 
