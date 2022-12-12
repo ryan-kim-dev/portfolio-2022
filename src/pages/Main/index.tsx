@@ -9,7 +9,7 @@ function Main() {
     );
   }, []);
 
-  const createText = time => {
+  const createText = (time: number) => {
     const text = [
       'H',
       'I',
@@ -28,7 +28,7 @@ function Main() {
       'I',
       'M',
     ];
-    const result = [];
+    const result: JSX.Element[] = [];
     const $br = React.createElement('br');
     text.forEach((item, index) => {
       if (item === '\n') result.push($br);

@@ -10,7 +10,7 @@ const Nav = React.lazy(() => import('./components/common/Nav'));
 // pages
 const AboutPage = React.lazy(() => import('./pages/AboutPage'));
 const ContactPage = React.lazy(() => import('./pages/ContactPage'));
-const MainPage = React.lazy(() => import('./pages/MainPage'));
+const MainPage = React.lazy(() => import('./pages/Main'));
 const WorksPage = React.lazy(() => import('./pages/WorksPage'));
 const TestimonialPage = React.lazy(() => import('./pages/TestimonialPage'));
 const ScrollToTop = React.lazy(() => import('./components/common/ScrollToTop'));
