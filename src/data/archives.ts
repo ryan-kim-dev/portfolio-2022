@@ -1,6 +1,6 @@
-import GithubLogo from '../assets/ghlogo.png';
-import NotionLogo from '../assets/notionlogo.png';
-import TistoryLogo from '../assets/tilogo.png';
+import GithubLogo from '../assets/logos/ghlogo.png';
+import NotionLogo from '../assets/logos/notionlogo.png';
+import TistoryLogo from '../assets/logos/tilogo.png';
 
 export const archives = [
   {

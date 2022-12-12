@@ -69,7 +69,11 @@ export const TextSection = styled.div`
   }
 `;
 
-export const Text = styled.span`
+type TextProps = {
+  time: number;
+};
+
+export const Text = styled.span<TextProps>`
   cursor: grab;
   /* display: flex;
   flex-direction: column; */
