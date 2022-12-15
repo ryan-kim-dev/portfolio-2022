@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import Spline from '@splinetool/react-spline';
 import { Container } from '../../GlobalStyle';
 
 type TextProps = {
@@ -16,24 +15,6 @@ export const SceneWrapper = styled.div`
   align-items: center;
   position: fixed;
   z-index: 0;
-  /* 테블릿 세로 (해상도 768px ~ 1023px)*/
-  @media all and (min-width: 768px) and (max-width: 1023px) {
-    transform: scale(0.7) translateX(600px);
-  }
-  /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
-  @media all and (min-width: 480px) and (max-width: 767px) {
-    transform: scale(0.5) translateX(-100px);
-    right: auto;
-    left: 50%;
-    margin-left: -600px;
-  }
-  /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
-  @media all and (max-width: 479px) {
-    display: none;
-  }
-`;
-export const Scene = styled(Spline)`
-  position: absolute;
   /* 테블릿 세로 (해상도 768px ~ 1023px)*/
   @media all and (min-width: 768px) and (max-width: 1023px) {
     transform: scale(0.7) translateX(600px);
