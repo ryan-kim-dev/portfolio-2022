@@ -9,6 +9,6 @@
     "jsx": "react",
     "allowJs": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "src/firebase.ts"],
   "exclude": ["node_modules"]
 }
