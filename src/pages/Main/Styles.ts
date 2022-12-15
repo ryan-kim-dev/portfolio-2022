@@ -1,7 +1,12 @@
 import styled, { css } from 'styled-components';
 import Spline from '@splinetool/react-spline';
-
 import { Container } from '../../GlobalStyle';
+
+type TextProps = {
+  time?: number;
+  title?: string;
+  children: React.ReactNode;
+};
 
 export const HomeContainer = styled(Container)``;
 
@@ -68,10 +73,6 @@ export const TextSection = styled.div`
     font-size: 100px;
   }
 `;
-
-type TextProps = {
-  time: number;
-};
 
 export const Text = styled.span<TextProps>`
   cursor: grab;
