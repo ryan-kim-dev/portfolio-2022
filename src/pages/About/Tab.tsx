@@ -52,9 +52,7 @@ function Tab() {
               <img src={el.imgUrl} alt="stack" />
               <div>{el.name}</div>
             </S.Left>
-            <S.Right>
-              <p>{el.description}</p>
-            </S.Right>
+            <S.Right>{el.description}</S.Right>
           </S.Desc>
         );
       })}

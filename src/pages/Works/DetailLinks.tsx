@@ -4,7 +4,14 @@ import { RiHome3Line } from 'react-icons/ri';
 import { CgFileDocument } from 'react-icons/cg';
 import { TbBrandGithub } from 'react-icons/tb';
 
-function DetailLinks({ deploy, youtube, github, notion }) {
+type DetailLinkProps = {
+  deploy: string;
+  youtube?: string;
+  github: string;
+  notion: string;
+};
+
+function DetailLinks({ deploy, youtube, github, notion }: DetailLinkProps) {
   return (
     <Container>
       <LinkBtn>

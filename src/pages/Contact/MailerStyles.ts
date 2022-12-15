@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 
-export const Form = styled.form`
+type FormProps = {
+  ref: React.RefObject<HTMLFormElement> | null;
+  action: string;
+  method: string;
+  onSubmit: unknown;
+};
+
+export const Form = styled.form<FormProps>`
   background: rgba(255, 255, 255, 0.2);
   width: 70%;
   display: flex;

@@ -21,7 +21,7 @@ function Archive() {
               <S.IconDescBox>
                 <ul>
                   {el.description.map(el => {
-                    return <li>{el}</li>;
+                    return <li key={Math.random()}>{el}</li>;
                   })}
                 </ul>
               </S.IconDescBox>

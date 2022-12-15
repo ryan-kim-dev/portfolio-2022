@@ -11,7 +11,7 @@ type AboutProps = {
   scrollToSection: (elementRef: {
     current: { offsetTop: number | undefined };
   }) => void;
-  testimonials: unknown; // MutableRefObject<null>
+  testimonials: { current: { offsetTop: number | undefined } };
 };
 
 function About({ testimonials }: AboutProps) {

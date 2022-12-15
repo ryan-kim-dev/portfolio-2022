@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import * as S from './Styles';
-import SplineBundle from './spline-bundle.js';
+import SplineBundle from './spline-bundle';
 
 function createText(time: number) {
   const text = [
@@ -28,7 +28,7 @@ function createText(time: number) {
     else
       result.push(
         <S.Text
-          key={Math.random()}
+          key={`${index}-${Date.now()}`}
           className="reverse"
           time={(index + 1) / time}
         >
@@ -45,7 +45,7 @@ function Main() {
     return <SplineBundle />;
   }, []);
 
-  const memoizedText = useMemo(() => createText(5), [5]);
+  const memoizedText = useMemo(() => createText(5), []);
 
   return (
     <S.HomeContainer id="home">
@@ -53,7 +53,11 @@ function Main() {
         {window.screen.width > 400 ? MemoizeSplineObj : null}
       </S.SceneWrapper>
 
-      <S.TextSection>{memoizedText}</S.TextSection>
+      <S.TextSection>
+        {memoizedText.map(text => (
+          <S.Text key={Math.random()}>{text}</S.Text>
+        ))}
+      </S.TextSection>
     </S.HomeContainer>
   );
 }

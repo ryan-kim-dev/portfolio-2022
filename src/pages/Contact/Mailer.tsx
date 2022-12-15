@@ -3,15 +3,16 @@ import emailjs from '@emailjs/browser';
 import * as S from './MailerStyles';
 
 function Mailer() {
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
 
-  const onSubmit = async e => {
+  const onSubmit = async (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!form.current) return;
     emailjs
       .sendForm(
         'service_jukedjo',
         'template_lizhqth',
-        form.current,
+        form?.current,
         'RneFkwHFvOdgSjiT8'
       )
       .then(
