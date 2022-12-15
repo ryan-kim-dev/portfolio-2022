@@ -27,7 +27,7 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
-    "build": "react-app-rewired build && react-scripts build && compress-cra",
+    "build": "react-app-rewired build && compress-cra",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
