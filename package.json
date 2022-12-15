@@ -6,13 +6,12 @@
     "@emailjs/browser": "^3.7.0",
     "@fortawesome/free-regular-svg-icons": "^6.2.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@splinetool/react-spline": "^2.2.5",
+    "@react-three/drei": "^9.46.7",
+    "@react-three/fiber": "^8.9.1",
     "axios": "^0.27.2",
     "compress-create-react-app": "^1.2.1",
-    "customize-cra": "^1.0.0",
     "firebase": "^9.9.1",
     "react": "^18.2.0",
-    "react-app-rewired": "^2.2.1",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
     "react-iframe": "^1.8.0",
@@ -23,12 +22,14 @@
     "react-scripts": "5.0.1",
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.1",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "three": "^0.147.0",
+    "three-stdlib": "^2.20.4"
   },
   "scripts": {
-    "start": "react-app-rewired start",
+    "start": "react-scripts start",
     "build": "react-scripts build && compress-cra",
-    "test": "react-app-rewired test",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -57,6 +58,7 @@
     "@types/react-redux": "^7.1.24",
     "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.26",
+    "@types/three": "^0.146.0",
     "babel-plugin-named-exports-order": "^0.0.2",
     "cra-bundle-analyzer": "^0.1.1",
     "prop-types": "^15.8.1",
