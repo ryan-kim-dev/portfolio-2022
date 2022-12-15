@@ -33,7 +33,7 @@ export const SceneWrapper = styled.div`
 `;
 
 export const TextSection = styled.div`
-  /* z-index: 1; */
+  z-index: 1;
   position: absolute;
   left: 200px;
   font-size: 180px;

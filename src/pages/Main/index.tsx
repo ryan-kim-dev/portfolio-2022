@@ -1,5 +1,6 @@
 import React from 'react';
 import * as S from './Styles';
+import Modeling from './Modeling';
 
 function Main() {
   return (
@@ -13,6 +14,7 @@ function Main() {
         <br />
         <S.Text>KIM</S.Text>
       </S.TextSection>
+      <Modeling />
     </S.HomeContainer>
   );
 }

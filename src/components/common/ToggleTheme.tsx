@@ -43,6 +43,7 @@ function ToggleTheme({ theme, setTheme, switchTheme }: ToggleThemeProps) {
 export default ToggleTheme;
 
 const ToggleContainer = styled.div`
+  z-index: 1;
   position: fixed;
   margin-top: 8rem;
   top: 100px;
