@@ -1,6 +1,7 @@
 import React from 'react';
 import * as S from './ProjectStyles';
 import DetailLinks from './DetailLinks';
+import { ProjectProps } from '../../types';
 
 function Project({
   cover,
@@ -11,7 +12,7 @@ function Project({
   youtube,
   github,
   notion,
-}) {
+}: ProjectProps) {
   return (
     <div>
       <S.ProjectArticle>

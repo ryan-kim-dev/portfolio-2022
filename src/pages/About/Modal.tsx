@@ -8,7 +8,11 @@ import { MdClose } from 'react-icons/md';
 
 import { reviews } from '../../data';
 
-function Modal({ handleOpenModal }) {
+type ModalProps = {
+  handleOpenModal: () => void;
+};
+
+function Modal({ handleOpenModal }: ModalProps) {
   const [page, setPage] = useState(0);
 
   return (

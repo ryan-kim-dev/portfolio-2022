@@ -2,7 +2,23 @@ import React from 'react';
 import Modal from './Modal';
 import * as S from './RefStyles';
 
-function Reference({ isOpen, handleOpenModal, scrollToSection, testimonials }) {
+type ReferenceProps = {
+  isOpen: boolean;
+  handleOpenModal: () => void;
+  scrollToSection: (elementRef: {
+    current: {
+      offsetTop: number | undefined;
+    };
+  }) => void;
+  testimonials: { current: { offsetTop: number | undefined } };
+};
+
+function Reference({
+  isOpen,
+  handleOpenModal,
+  scrollToSection,
+  testimonials,
+}: ReferenceProps) {
   return (
     <S.RefLayout>
       {!isOpen && (

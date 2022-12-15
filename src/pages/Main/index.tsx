@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import * as S from './Styles';
-import SplineBundle from './spline-bundle.js';
+import SplineBundle from './spline-bundle';
 
 function createText(time: number) {
   const text = [
