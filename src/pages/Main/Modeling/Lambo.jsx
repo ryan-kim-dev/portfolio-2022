@@ -6,148 +6,13 @@ source: https://sketchfab.com/3d-models/800-000-views-special-model-sdc-0767ad6f
 title: 800 000 views - SPECIAL MODEL - SDC
 */
 
-import * as THREE from 'three';
-import React, { useRef } from 'react';
+import React from 'react';
 import { useGLTF } from '@react-three/drei';
-import { GLTF } from 'three-stdlib';
 
-type GLTFResult = GLTF & {
-  nodes: {
-    Object_6: THREE.Mesh;
-    Object_8: THREE.Mesh;
-    Object_10: THREE.Mesh;
-    Object_11: THREE.Mesh;
-    Object_12: THREE.Mesh;
-    Object_13: THREE.Mesh;
-    Object_14: THREE.Mesh;
-    Object_15: THREE.Mesh;
-    Object_16: THREE.Mesh;
-    Object_17: THREE.Mesh;
-    Object_18: THREE.Mesh;
-    Object_19: THREE.Mesh;
-    Object_20: THREE.Mesh;
-    Object_22: THREE.Mesh;
-    Object_24: THREE.Mesh;
-    Object_25: THREE.Mesh;
-    Object_26: THREE.Mesh;
-    Object_28: THREE.Mesh;
-    Object_30: THREE.Mesh;
-    Object_31: THREE.Mesh;
-    Object_33: THREE.Mesh;
-    Object_35: THREE.Mesh;
-    Object_37: THREE.Mesh;
-    Object_39: THREE.Mesh;
-    Object_40: THREE.Mesh;
-    Object_41: THREE.Mesh;
-    Object_42: THREE.Mesh;
-    Object_43: THREE.Mesh;
-    Object_44: THREE.Mesh;
-    Object_45: THREE.Mesh;
-    Object_46: THREE.Mesh;
-    Object_48: THREE.Mesh;
-    Object_50: THREE.Mesh;
-    Object_52: THREE.Mesh;
-    Object_54: THREE.Mesh;
-    Object_56: THREE.Mesh;
-    Object_57: THREE.Mesh;
-    Object_59: THREE.Mesh;
-    Object_60: THREE.Mesh;
-    Object_62: THREE.Mesh;
-    Object_63: THREE.Mesh;
-    Object_64: THREE.Mesh;
-    Object_65: THREE.Mesh;
-    Object_67: THREE.Mesh;
-    Object_68: THREE.Mesh;
-    Object_70: THREE.Mesh;
-    Object_71: THREE.Mesh;
-    Object_73: THREE.Mesh;
-    Object_74: THREE.Mesh;
-    Object_76: THREE.Mesh;
-    Object_78: THREE.Mesh;
-    Object_79: THREE.Mesh;
-    Object_81: THREE.Mesh;
-    Object_82: THREE.Mesh;
-    Object_84: THREE.Mesh;
-    Object_86: THREE.Mesh;
-    Object_88: THREE.Mesh;
-    Object_90: THREE.Mesh;
-    Object_92: THREE.Mesh;
-    Object_94: THREE.Mesh;
-    Object_95: THREE.Mesh;
-    Object_97: THREE.Mesh;
-    Object_98: THREE.Mesh;
-    Object_100: THREE.Mesh;
-    Object_101: THREE.Mesh;
-    Object_103: THREE.Mesh;
-    Object_105: THREE.Mesh;
-    Object_107: THREE.Mesh;
-    Object_108: THREE.Mesh;
-    Object_110: THREE.Mesh;
-    Object_112: THREE.Mesh;
-    Object_113: THREE.Mesh;
-    Object_115: THREE.Mesh;
-    Object_117: THREE.Mesh;
-    Object_119: THREE.Mesh;
-    Object_120: THREE.Mesh;
-    Object_121: THREE.Mesh;
-    Object_122: THREE.Mesh;
-    Object_123: THREE.Mesh;
-    Object_124: THREE.Mesh;
-    Object_125: THREE.Mesh;
-    Object_126: THREE.Mesh;
-    Object_127: THREE.Mesh;
-    Object_129: THREE.Mesh;
-  };
-  materials: {
-    ['Material.017']: THREE.MeshStandardMaterial;
-    ['Material.040']: THREE.MeshStandardMaterial;
-    ['Material.041']: THREE.MeshStandardMaterial;
-    ['Material.043']: THREE.MeshStandardMaterial;
-    ['Material.044']: THREE.MeshStandardMaterial;
-    ['Default.001']: THREE.MeshStandardMaterial;
-    ['Material.045']: THREE.MeshStandardMaterial;
-    ['Material.046']: THREE.MeshStandardMaterial;
-    ['Material.077']: THREE.MeshStandardMaterial;
-    ['Material.076']: THREE.MeshStandardMaterial;
-    ['Material.084']: THREE.MeshStandardMaterial;
-    ['Material.085']: THREE.MeshStandardMaterial;
-    ['Material.013']: THREE.MeshStandardMaterial;
-    Miroir: THREE.MeshStandardMaterial;
-    ['Material.001']: THREE.MeshStandardMaterial;
-    ['Material.005']: THREE.MeshStandardMaterial;
-    ['Material.014']: THREE.MeshStandardMaterial;
-    ['Material.019']: THREE.MeshStandardMaterial;
-    ['Material.083']: THREE.MeshStandardMaterial;
-    ['Material.079']: THREE.MeshStandardMaterial;
-    ['Material.081']: THREE.MeshStandardMaterial;
-    ['Material.080']: THREE.MeshStandardMaterial;
-    ['Material.078']: THREE.MeshStandardMaterial;
-    ['Material.007']: THREE.MeshStandardMaterial;
-    ['Material.009']: THREE.MeshStandardMaterial;
-    ['Material.003']: THREE.MeshStandardMaterial;
-    material_0: THREE.MeshStandardMaterial;
-    ['Material.012']: THREE.MeshStandardMaterial;
-    ['Material.002']: THREE.MeshStandardMaterial;
-    ['Material.010']: THREE.MeshStandardMaterial;
-    ['Material.008']: THREE.MeshStandardMaterial;
-    ['Material.004']: THREE.MeshStandardMaterial;
-    ['Material.011']: THREE.MeshStandardMaterial;
-    black: THREE.MeshStandardMaterial;
-    ['Material.063']: THREE.MeshStandardMaterial;
-    ['Material.062']: THREE.MeshStandardMaterial;
-    drlwhite: THREE.MeshStandardMaterial;
-    xenonhead: THREE.MeshStandardMaterial;
-    ['Material.061']: THREE.MeshStandardMaterial;
-    ['Material.060']: THREE.MeshStandardMaterial;
-    ['Material.059']: THREE.MeshStandardMaterial;
-    ['Material.058']: THREE.MeshStandardMaterial;
-  };
-};
-
-export default function Model(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF('/lambo.gltf') as any;
+export default function Model(props) {
+  const { nodes, materials } = useGLTF('/scene.gltf');
   return (
-    <group {...props} dispose={null} scale={1.3}>
+    <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <group
@@ -634,4 +499,4 @@ export default function Model(props: JSX.IntrinsicElements['group']) {
   );
 }
 
-useGLTF.preload('/lambo.gltf');
+useGLTF.preload('/scene.gltf');

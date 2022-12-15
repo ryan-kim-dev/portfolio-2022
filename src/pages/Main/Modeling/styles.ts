@@ -12,7 +12,6 @@ export const ModelLayout = styled.div`
 `;
 
 export const ModelCanvas = styled(Canvas)`
-  border: 3px solid blue;
   position: absolute;
   width: 50px;
   height: 50px;
