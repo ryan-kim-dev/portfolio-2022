@@ -2,34 +2,23 @@
 
 [배포 링크](https://my-portfolio-app-phi.vercel.app/)
 
-## Branches
+## 소개
+자기소개와 포트폴리오를 담은 웹사이트입니다.
 
-### master: v1.0 React + TS 프로젝트
-(추후 ts/next 2.0 버젼 프로젝트로 변경) 
+## Update Logs
+[작업기록](https://handsome-parcel-51e.notion.site/c231e8ed2c1e4a498facc655817bd159)
 
+### Lighthouse performance 점수 변화
 
-### dev/csr 브랜치: CRA + TS 마이그레이션 & 렌더링 최적화 진행
-
-
-### dev/ssr 브랜치: v2.0 TS + Next 프로젝트 진행
-- feature/atomic: 아토믹 디자인 패턴을 적용한 파일구조 테스트용 feature 브랜치
-
-
-## Stack
-
-[작업기 보러가기](https://handsome-parcel-51e.notion.site/1-c231e8ed2c1e4a498facc655817bd159)
-
-### 클라이언트
-#### 라이브러리 or 프레임워크: 
-- v1.0: React(CRA)
-- v2.0: NextJS
-#### 상태관리: 
-- v1.0: redux 
-- v2.0: 미정
-#### 스타일링: 
-- v1.0: styled-components(CSS-IN-JS), react-spline(WebGL)
-- v2.0: 
-
-### 백엔드
-
-- DB: Firebase Cloudstore
+- 헤로쿠 → 버셀 배포 플랫폼 변경:
+    - 데스크탑: 26점 → 34점
+    - 모바일: 20점대 ( 변동없음 )
+- 3d 모델링 React-Spline(네트워크 리소스 사용) → Three.js 직접 사용 으로 변경
+    - 데스크탑: 38점 → 47점
+    - 모바일: 2~30점 초반 ( 유의미한 변화 없음 )
+- App.tsx 불필요한 지연로딩 (Suspense, React.Lazy) 제거
+    - 데스크탑: 47점 → 84점
+    - 모바일: 32점 ( 변화 없음 )
+- 불필요한 중복 컴포넌트 제거, atoms/modules 정의 및 재사용(진행중)
+- Firebase 사용 코드 리팩토링(예정)
+- 상태관리 라이브러리 변경(예정)
