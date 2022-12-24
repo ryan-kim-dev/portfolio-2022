@@ -22,7 +22,7 @@
   },
   "scripts": {
     "postinstall": "husky install",
-    "check": "prettier --cache --write && eslint --cache .",
+    "lint": "eslint --fix src",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
