@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { usePlane } from '@react-three/cannon';
 import { MeshReflectorMaterial } from '@react-three/drei';
 import { useLoader } from '@react-three/fiber';
@@ -46,7 +47,7 @@ function Ground() {
 
     let uvs2 = meshRef2.current.geometry.attributes.uv.array;
     meshRef2.current.geometry.setAttribute('uv2', new BufferAttribute(uvs2, 2));
-  }, []);
+  }, [meshRef.current]);
 
   return (
     <>

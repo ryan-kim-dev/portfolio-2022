@@ -23,6 +23,7 @@ export const NavItem = styled.li`
   margin: 10px;
   cursor: pointer;
   font-size: 20px;
+  color: #e5e5e5;
 
   @media all and (max-width: 479px) {
     margin: 5px;

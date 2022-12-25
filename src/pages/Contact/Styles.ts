@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import { Container } from '../../GlobalStyle';
+import { Layout, Container } from '../../GlobalStyle';
+
+export const ContactLayout = styled(Layout)``;
 
 export const ContactContainer = styled(Container)``;
 

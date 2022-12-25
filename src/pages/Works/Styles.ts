@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import { Container } from '../../GlobalStyle';
+import { Layout, Container } from '../../GlobalStyle';
+
+export const WorksLayout = styled(Layout)``;
 
 export const WorksContainer = styled(Container)`
   z-index: 1;

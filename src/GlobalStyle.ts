@@ -19,6 +19,7 @@ body {
   display:flex;
   flex-direction: column;
   overflow-x: hidden;
+  background-color: #414141;
 
   #light {
     background-color: #ededed;
@@ -46,15 +47,13 @@ body {
 export default GlobalStyle;
 
 type LayoutProps = {
-  about?: string;
   max?: string;
   children?: React.ReactNode;
-  ref?: React.MutableRefObject<HTMLDivElement>;
 };
 
-export const Layout = styled.main<LayoutProps>`
+export const Layout = styled.div<LayoutProps>`
   width: 100%;
-  height: ${({ max }) => (max ? 'max-content' : '100vh')};
+  height: ${({ max }) => (max ? 'max-content' : '100%')};
   display: flex;
   justify-content: center;
   align-items: center;

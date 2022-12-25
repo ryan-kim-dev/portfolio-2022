@@ -56,9 +56,7 @@ export const TextSection = styled.div`
 `;
 
 export const Text = styled.span<TextProps>`
-  cursor: grab;
-  /* display: flex;
-  flex-direction: column; */
+  color: #e5e5e5;
   max-width: 500px;
   flex-wrap: wrap;
   font-weight: 500;

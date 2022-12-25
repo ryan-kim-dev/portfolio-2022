@@ -15,27 +15,29 @@ function Testimonials() {
     const getMessages = async () => {
       const data = await getDocs(messagesCollectionRef);
 
-      setMessages(data.docs.map(doc => ({ ...doc.data(), id: doc.id })));
+      setMessages(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
     getMessages();
   }, []);
 
   return (
-    <S.ListContainer>
-      {messages.map((message, idx) => {
-        return (
-          <Message
-            idx={idx}
-            key={message.id}
-            username={message.username}
-            relation={message.relation}
-            bodyText={message.bodyText}
-            photoURL={message.photoURL}
-          />
-        );
-      })}
-      <Auth />
-    </S.ListContainer>
+    <S.ListLayout>
+      <S.ListContainer>
+        {messages.map((message, idx) => {
+          return (
+            <Message
+              idx={idx}
+              key={message.id}
+              username={message.username}
+              relation={message.relation}
+              bodyText={message.bodyText}
+              photoURL={message.photoURL}
+            />
+          );
+        })}
+        <Auth />
+      </S.ListContainer>
+    </S.ListLayout>
   );
 }
 
