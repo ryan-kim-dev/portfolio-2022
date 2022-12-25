@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import { Canvas } from '@react-three/fiber';
 
 export const ModelLayout = styled.div`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: fixed;
   z-index: 0;
   display: flex;
