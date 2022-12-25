@@ -1,20 +1,25 @@
 import React from 'react';
-import { OrbitControls, Float } from '@react-three/drei';
-import Lambo from './Lambo';
 import * as S from './styles';
+import { Canvas } from '@react-three/fiber';
+import { Scene } from './Scene';
+import { Physics } from '@react-three/cannon';
 
 function Modeling() {
   return (
-    <S.ModelLayout>
-      <S.ModelCanvas>
-        <OrbitControls enableZoom={false} />
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[-2, 5, 2]} intensity={1} />
-        <Float speed={1.4} rotationIntensity={1.5} floatIntensity={2.3}>
-          <Lambo />
-        </Float>
-      </S.ModelCanvas>
-    </S.ModelLayout>
+    <div
+      style={{
+        margin: '0',
+        width: '100vw',
+        height: '100vh',
+        overflow: 'hidden',
+      }}
+    >
+      <Canvas>
+        <Physics broadphase="SAP" gravity={[0, -2.6, 0]}>
+          <Scene />
+        </Physics>
+      </Canvas>
+    </div>
   );
 }
 

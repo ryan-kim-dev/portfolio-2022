@@ -6,6 +6,7 @@
     "@emailjs/browser": "^3.7.0",
     "@fortawesome/free-regular-svg-icons": "^6.2.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@react-three/cannon": "^6.5.0",
     "@react-three/drei": "^9.46.7",
     "@react-three/fiber": "^8.9.1",
     "axios": "^0.27.2",
