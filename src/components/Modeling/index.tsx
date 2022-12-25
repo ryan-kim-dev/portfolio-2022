@@ -1,4 +1,3 @@
-import React from 'react';
 import * as S from './styles';
 import { Scene } from './Scene';
 import { Physics } from '@react-three/cannon';

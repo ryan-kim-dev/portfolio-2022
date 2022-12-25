@@ -1,4 +1,3 @@
-import React from 'react';
 import * as S from './TabStyles';
 
 function Tab() {
@@ -45,7 +44,7 @@ function Tab() {
 
   return (
     <S.TabLayout>
-      {menuArr.map(el => {
+      {menuArr.map((el) => {
         return (
           <S.Desc key={Math.random()}>
             <S.Left>

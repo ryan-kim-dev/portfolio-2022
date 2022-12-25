@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import * as S from './MailerStyles';
 
@@ -16,12 +16,12 @@ function Mailer() {
         'RneFkwHFvOdgSjiT8'
       )
       .then(
-        result => {
+        (result) => {
           console.log(result.text);
           alert('메일을 전송하였습니다. 감사합니다.🙂');
           e.target.reset();
         },
-        error => {
+        (error) => {
           console.log(error.text);
         }
       );

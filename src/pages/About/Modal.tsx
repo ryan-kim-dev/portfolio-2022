@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import * as S from './ModalStyles';
 import {
   IoIosArrowDropleftCircle,
@@ -24,7 +24,7 @@ function Modal({ handleOpenModal }: ModalProps) {
         <S.ReviewChangeBtn
           className="reverse"
           type="button"
-          onClick={() => setPage(prev => prev - 1)}
+          onClick={() => setPage((prev) => prev - 1)}
           disabled={page === 0}
         >
           <IoIosArrowDropleftCircle />
@@ -33,7 +33,7 @@ function Modal({ handleOpenModal }: ModalProps) {
         <S.ReviewChangeBtn
           className="reverse"
           type="button"
-          onClick={() => setPage(prev => prev + 1)}
+          onClick={() => setPage((prev) => prev + 1)}
           disabled={page === reviews.length - 1}
         >
           <IoIosArrowDroprightCircle />

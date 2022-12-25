@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import * as S from './Styles';
 import { ContactLinks } from '../../components';
 import Archive from './Archive';

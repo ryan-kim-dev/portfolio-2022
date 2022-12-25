@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { RiHome3Line } from 'react-icons/ri';
 import { CgFileDocument } from 'react-icons/cg';

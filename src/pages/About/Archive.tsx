@@ -1,11 +1,10 @@
-import React from 'react';
 import * as S from './ArchStyles';
 import { archives } from '../../data/archives';
 
 function Archive() {
   return (
     <S.Wrapper>
-      {archives.map(el => {
+      {archives.map((el) => {
         return (
           <a
             key={Math.random()}
@@ -20,7 +19,7 @@ function Archive() {
               </S.IconLogoBox>
               <S.IconDescBox>
                 <ul>
-                  {el.description.map(el => {
+                  {el.description.map((el) => {
                     return <li key={Math.random()}>{el}</li>;
                   })}
                 </ul>

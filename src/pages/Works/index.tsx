@@ -1,4 +1,3 @@
-import React from 'react';
 import * as S from './Styles';
 import Project from './Project';
 import { personal, team } from '../../data/projects';
@@ -8,7 +7,7 @@ function Works() {
     <S.WorksContainer>
       <S.ProjectSection>
         <S.SubTitle>PERSONAL PROJECTS</S.SubTitle>
-        {personal.map(project => {
+        {personal.map((project) => {
           return (
             <Project
               key={project.id}
@@ -26,7 +25,7 @@ function Works() {
       </S.ProjectSection>
       <S.ProjectSection>
         <S.SubTitle>TEAM PROJECTS</S.SubTitle>
-        {team.map(project => {
+        {team.map((project) => {
           return (
             <Project
               key={project.id}

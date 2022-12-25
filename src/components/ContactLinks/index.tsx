@@ -1,4 +1,3 @@
-import React from 'react';
 import * as S from './styles';
 import { SiNotion } from 'react-icons/si';
 import { RiHome3Line } from 'react-icons/ri';
