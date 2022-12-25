@@ -4,8 +4,8 @@ import {
   PerspectiveCamera,
 } from '@react-three/drei';
 import { Suspense } from 'react';
-// import { Car } from "./Car";
-// import { Ground } from "./Ground";
+import Car from './Car';
+import Ground from './Ground';
 import Track from './Track';
 
 export function Scene() {
@@ -20,9 +20,8 @@ export function Scene() {
       <OrbitControls target={[-2.64, -0.71, 0.03]} />
 
       <Track />
-      {/* 
-          <Ground />
-          <Car /> */}
+      <Ground />
+      <Car />
     </Suspense>
   );
 }
