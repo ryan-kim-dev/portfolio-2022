@@ -1,6 +1,6 @@
 import React from 'react';
 import * as S from './Styles';
-import ContactLinks from '../../components/common/ContactLinks';
+import ContactLinks from '../../components/ContactLinks';
 import Mailer from './Mailer';
 
 function Contact() {

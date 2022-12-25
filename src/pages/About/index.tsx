@@ -1,20 +1,12 @@
 import React, { useState } from 'react';
 import * as S from './Styles';
-import ContactLinks from '../../components/common/ContactLinks';
+import { ContactLinks } from '../../components';
 import Archive from './Archive';
 import Tab from './Tab';
 import Career from './Career';
 import Reference from './Reference';
-import { scrollToSection } from '../../utils/scrollToSection';
 
-type AboutProps = {
-  scrollToSection: (elementRef: {
-    current: { offsetTop: number | undefined };
-  }) => void;
-  testimonials: { current: { offsetTop: number | undefined } };
-};
-
-function About({ testimonials }: AboutProps) {
+function About() {
   const titles = ['ARCHIVE', 'SKILLS', 'EDUCATION'];
   const [isOpen, setIsOpen] = useState(false);
 
@@ -64,12 +56,7 @@ function About({ testimonials }: AboutProps) {
               </p>
             </S.Intro>
           </S.Greeting>
-          <Reference
-            isOpen={isOpen}
-            handleOpenModal={handleOpenModal}
-            scrollToSection={scrollToSection}
-            testimonials={testimonials}
-          />
+          <Reference isOpen={isOpen} handleOpenModal={handleOpenModal} />
         </S.Header>
         <S.Section>
           <S.Title>{titles[0]}</S.Title>
