@@ -19,9 +19,11 @@ export const ModelCanvas = styled(Canvas)`
 
 export const ModelManual = styled.div`
   position: absolute;
-  bottom: 1rem;
-  left: 1rem;
+  bottom: 2rem;
+  right: 2rem;
   color: #fff;
   font-size: 20px;
   font-weight: bold;
+  background-color: #202020;
+  padding: 1rem;
 `;
