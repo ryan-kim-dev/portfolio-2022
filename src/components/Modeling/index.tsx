@@ -11,6 +11,9 @@ function Modeling() {
         </Physics>
       </S.ModelCanvas>
       <S.ModelManual>
+        <p className="caution">
+          조작이 되지 않을 경우 한/영 키를 전환 해보세요!
+        </p>
         <p>조작키: W A S D</p>
         <p>카메라 시점 변경: K</p>
         <p>리셋: R</p>

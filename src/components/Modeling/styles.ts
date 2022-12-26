@@ -26,4 +26,9 @@ export const ModelManual = styled.div`
   font-weight: bold;
   background-color: #202020;
   padding: 1rem;
+
+  .caution {
+    font-size: 13px;
+    color: lightblue;
+  }
 `;
