@@ -5,9 +5,6 @@ export const AboutLayout = styled(Layout)``;
 
 export const AboutContainer = styled(Container)`
   z-index: 1;
-  /* background: rgba(255, 255, 255, 0.1);
-   */
-  width: 70%;
   row-gap: 3rem;
   display: flex;
   justify-content: center;

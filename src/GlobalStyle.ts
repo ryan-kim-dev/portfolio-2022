@@ -4,7 +4,7 @@ const GlobalStyle = createGlobalStyle`
 
 * {
      margin: 0;
-     padding: 0px;
+     padding: 0;
      box-sizing: border-box;
 
      a {
@@ -20,6 +20,9 @@ body {
   flex-direction: column;
   overflow-x: hidden;
   background-color: #414141;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 
   #light {
     background-color: #ededed;
