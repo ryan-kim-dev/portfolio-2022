@@ -56,10 +56,17 @@ export default class NotionService {
       id: page.id,
       cover: cover,
       title: page.properties.Name.title[0].plain_text,
-      // category: page.properties.Category.select.name,
-      tags: page.properties.Tags.multi_select.name,
+      tags: page.properties.Tags.multi_select,
       date: page.properties.Updated.last_edited_time,
       slug: page.properties.Slug.formula.string,
+      //   id: page.id,
+      //   cover: cover,
+      //   title: page.properties.Name.title[0].plain_text,
+      //   // category: page.properties.Category.select.name,
+      //   tags: page.properties.Tags.multi_select.name,
+      //   description: page.properties.Description.rich_text[0].plain_text,
+      //   date: page.properties.Updated.last_edited_time,
+      //   slug: page.properties.Slug.formula.string,
     };
   }
 }

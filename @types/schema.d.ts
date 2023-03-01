@@ -10,5 +10,6 @@ export type BlogPost = {
   cover: string;
   title: string;
   tags: Tag[];
+  description?: string;
   date: string;
 };

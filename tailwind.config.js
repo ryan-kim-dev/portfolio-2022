@@ -7,9 +7,9 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      sans: ["'Nontserrat'"],
+      sans: ["'Montserrat'"],
       mono: ["'Inconsolata'"],
     },
   },
-  plugins: ['@tailwindcss/typography'],
+  plugins: [require('@tailwindcss/typography')],
 };
