@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 import { usePlane } from '@react-three/cannon';
 import { MeshReflectorMaterial } from '@react-three/drei';

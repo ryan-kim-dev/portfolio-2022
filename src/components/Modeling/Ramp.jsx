@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useTrimesh } from '@react-three/cannon';
 import { useLoader } from '@react-three/fiber';
 import { useRef } from 'react';

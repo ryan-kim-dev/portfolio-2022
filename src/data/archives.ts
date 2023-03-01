@@ -15,7 +15,7 @@ export const archives = [
   },
   {
     id: 2,
-    link: 'https://handsome-parcel-51e.notion.site/275ad8a7ba9540a2bfea2d1597c8b563',
+    link: 'https://fe-ryan-kim.notion.site/275ad8a7ba9540a2bfea2d1597c8b563',
     logo: NotionLogo,
     title: '노션',
     description: [
