@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import * as S from './Styles';
-import { ContactLinks } from '../../components';
+import { ContactLinks } from '@component/components';
 import Archive from './Archive';
 import Tab from './Tab';
 import Career from './Career';

@@ -1,11 +1,11 @@
 import React from 'react';
 // import styled from 'styled-components';
-import { ModalBackdrop, ModalView } from '../../GlobalStyle';
+import { ModalBackdrop, ModalView } from '../../src/GlobalStyle';
 import MessageForm from './MessageForm';
 function DeleteMessage({ isOpen, setIsOpen, handleButtonClick }) {
   return (
     <ModalBackdrop>
-      <ModalView onClick={e => e.stopPropagation()}>
+      <ModalView onClick={(e) => e.stopPropagation()}>
         <button className={'closingBtn'} onClick={() => handleButtonClick()}>
           x
         </button>

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Layout, Container } from '../../GlobalStyle';
+import { Layout, Container } from '../../src/GlobalStyle';
 
 export const AboutLayout = styled(Layout)``;
 

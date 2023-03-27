@@ -1,6 +1,7 @@
+import { Modeling, Nav } from '@component/components';
 import * as S from './Styles';
 
-function Main() {
+export default function Home() {
   return (
     <S.HomeContainer id="home">
       <S.SceneWrapper></S.SceneWrapper>
@@ -15,5 +16,3 @@ function Main() {
     </S.HomeContainer>
   );
 }
-
-export default Main;

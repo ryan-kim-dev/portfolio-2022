@@ -1,6 +1,6 @@
 import * as S from './ProjectStyles';
 import DetailLinks from './DetailLinks';
-import { ProjectProps } from '../../types';
+import { ProjectProps } from '../../src/types';
 
 function Project({
   cover,

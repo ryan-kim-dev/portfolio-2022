@@ -1,5 +1,5 @@
 import * as S from './Styles';
-import ContactLinks from '../../components/ContactLinks';
+import ContactLinks from '@component/components/ContactLinks';
 import Mailer from './Mailer';
 
 function Contact() {

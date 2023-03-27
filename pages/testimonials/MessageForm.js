@@ -12,7 +12,7 @@ const MessageForm = ({ method }) => {
     photoURL: localStorage.photoURL,
     uid: localStorage.uid,
   });
-  const onSubmit = async e => {
+  const onSubmit = async (e) => {
     // 참고 : https://firebase.google.com/docs/firestore/manage-data/add-data?hl=ko&authuser=0
     e.preventDefault();
 
@@ -63,9 +63,9 @@ const MessageForm = ({ method }) => {
     }
   };
 
-  const onChange = e => {
+  const onChange = (e) => {
     let { name, value } = e.target;
-    setMessage(prev => ({
+    setMessage((prev) => ({
       ...prev, // 기존 객체 복사 (spread)
       [name]: value,
       // input에 부여된 name 속성의 값을 key로, name 키를 가진 값을 value로 설정.

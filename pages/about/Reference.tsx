@@ -1,6 +1,6 @@
-import { useNavigate } from 'react-router-dom';
 import Modal from './Modal';
 import * as S from './RefStyles';
+import Link from 'next/link';
 
 type ReferenceProps = {
   isOpen: boolean;
@@ -8,8 +8,6 @@ type ReferenceProps = {
 };
 
 function Reference({ isOpen, handleOpenModal }: ReferenceProps) {
-  const navigate = useNavigate();
-
   return (
     <S.RefLayout>
       {!isOpen && (
@@ -19,8 +17,8 @@ function Reference({ isOpen, handleOpenModal }: ReferenceProps) {
       )}
       {isOpen ? <Modal handleOpenModal={handleOpenModal} /> : null}
       {!isOpen && (
-        <S.RefCheckBtn type="button" onClick={() => navigate('/testimonials')}>
-          추천사 확인
+        <S.RefCheckBtn type="button">
+          <Link href="/testimonials">추천사 확인</Link>
         </S.RefCheckBtn>
       )}
     </S.RefLayout>

@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { Container } from '../../GlobalStyle';
+import { Container } from '../src/GlobalStyle';
 
 type TextProps = {
   time?: number;

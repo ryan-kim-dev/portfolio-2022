@@ -9,7 +9,7 @@ function Logout({ setIsLoggedIn }) {
   const handleAuth = async () => {
     await dispatch(logoutInitiate());
     window.localStorage.clear(); // 로컬스토리지 저장내용 전체삭제
-    return setIsLoggedIn(prev => false);
+    return setIsLoggedIn((prev) => false);
   };
 
   return <LogoutButton onClick={handleAuth}>Logout</LogoutButton>;

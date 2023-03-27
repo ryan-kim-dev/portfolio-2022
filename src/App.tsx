@@ -1,6 +1,6 @@
 import Router from './routes/Router';
 import GlobalStyle from './GlobalStyle';
-import { Modeling, Nav } from './components';
+import { Modeling, Nav } from '@component/components';
 
 function App() {
   return (
