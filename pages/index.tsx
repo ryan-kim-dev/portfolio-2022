@@ -4,7 +4,9 @@ import * as S from './Styles';
 export default function Home() {
   return (
     <S.HomeContainer id="home">
-      <S.SceneWrapper></S.SceneWrapper>
+      <S.SceneWrapper>
+        <Modeling />
+      </S.SceneWrapper>
 
       <S.TextSection className="reverse">
         <S.Text>HI, I'M</S.Text>

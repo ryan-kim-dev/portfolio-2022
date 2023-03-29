@@ -7,10 +7,7 @@ import { useControls, useWheels } from './hooks';
 import { WheelDebug } from './WheelDebug';
 
 function Car({ thirdPerson }) {
-  let result = useLoader(
-    GLTFLoader,
-    process.env.PUBLIC_URL + '/models/car.glb'
-  ).scene;
+  let result = useLoader(GLTFLoader, './models/car.glb').scene;
 
   const position = [-1.5, 0.5, 3];
   const width = 0.15;

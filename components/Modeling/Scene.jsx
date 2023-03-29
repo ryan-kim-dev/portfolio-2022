@@ -28,10 +28,7 @@ export function Scene() {
 
   return (
     <Suspense fallback={null}>
-      <Environment
-        files={process.env.PUBLIC_URL + '/textures/envmap.hdr'}
-        background={'both'}
-      />
+      <Environment files={'./textures/envmap.hdr'} background={'both'} />
 
       <PerspectiveCamera makeDefault position={cameraPosition} fov={40} />
       {!thirdPerson && <OrbitControls target={[-2.64, -0.71, 0.03]} />}

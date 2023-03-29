@@ -6,15 +6,9 @@ import ColliderBox from './ColiderBox';
 import Ramp from './Ramp';
 
 function Track() {
-  const result = useLoader(
-    GLTFLoader,
-    process.env.PUBLIC_URL + '/models/track.glb'
-  );
+  const result = useLoader(GLTFLoader, './models/track.glb');
 
-  const colorMap = useLoader(
-    TextureLoader,
-    process.env.PUBLIC_URL + '/textures/track.png'
-  );
+  const colorMap = useLoader(TextureLoader, './textures/track.png');
 
   useEffect(() => {
     colorMap.anisotropy = 16;

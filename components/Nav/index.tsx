@@ -1,18 +1,25 @@
-import { useNavigate } from 'react-router-dom';
 import * as S from './styles';
+import Link from 'next/link';
 
 function Nav() {
-  const navigate = useNavigate();
   return (
     <S.NavContainer>
       <S.NavLists className="reverse">
-        <S.NavItem onClick={() => navigate('/')}>Home</S.NavItem>
-        <S.NavItem onClick={() => navigate('/about')}>About</S.NavItem>
-        <S.NavItem onClick={() => navigate('/works')}>Works</S.NavItem>
-        <S.NavItem onClick={() => navigate('/testimonials')}>
-          Testimonials
+        <S.NavItem>
+          <Link href="/">Home</Link>
         </S.NavItem>
-        <S.NavItem onClick={() => navigate('/contact')}>Contact</S.NavItem>
+        <S.NavItem>
+          <Link href="/about">About</Link>
+        </S.NavItem>
+        <S.NavItem>
+          <Link href="/works">Works</Link>
+        </S.NavItem>
+        <S.NavItem>
+          <Link href="/testimonials">Testimonials</Link>
+        </S.NavItem>
+        <S.NavItem>
+          <Link href="/contact">Contact</Link>
+        </S.NavItem>
       </S.NavLists>
     </S.NavContainer>
   );
