@@ -18,7 +18,7 @@
 
 ## Update Logs
 
-[작업기록](https://handsome-parcel-51e.notion.site/c231e8ed2c1e4a498facc655817bd159)
+[작업기록](https://www.notion.so/v-2022-c231e8ed2c1e4a498facc655817bd159?pvs=4)
 
 ### Lighthouse performance 점수 변화
 
